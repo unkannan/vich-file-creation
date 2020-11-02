@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MCCI_IN200101UV01 xmlns="urn:hl7-org:v3"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	ITSVersion="XML_1.0"
+	xsi:schemaLocation="urn:hl7-org:v3 http://eudravigilance.ema.europa.eu/XSD/multicacheschemas/MCCI_IN200101UV01.xsd">
+
+	<id root="2.16.840.1.113883.3.989.2.1.3.20" />
+
+	<creationTime value="20200925133715" />
+
+	<responseModeCode code="D" />
+
+	<interactionId extension="MCCI_IN200101UV01"
+		root="2.16.840.1.113883.1.6" />
+
+	<MCCI_IN000002UV01>
+
+		<id root="2.16.840.1.113883.3.989.2.1.3.19" />
+
+		<creationTime value="20200925133715" />
+
+		<interactionId extension="MCCI_IN000002UV01"
+			root="2.16.840.1.113883.1.6" />
+
+		<processingCode code="P" />
+
+		<processingModeCode code="T" />
+
+		<acceptAckCode code="NE" />
+
+		<receiver typeCode="RCV">
+
+			<device classCode="DEV" determinerCode="INSTANCE">
+
+				<id extension="ORG100017123"
+					root="2.16.840.1.113883.3.989.2.1.3.16" />
+
+			</device>
+
+		</receiver>
+
+		<sender typeCode="SND">
+
+			<device classCode="DEV" determinerCode="INSTANCE">
+
+				<id extension="EVHUMAN" root="2.16.840.1.113883.3.989.2.1.3.15" />
+
+			</device>
+
+		</sender>
+
+		<attentionLine>
+
+			<keyWordText code="1"
+				codeSystem="2.16.840.1.113883.3.989.2.1.1.24"
+				codeSystemVersion="2.0" displayName="dateOfIcsrMessageCreation" />
+
+			<value value="20150101101010" xsi:type="TS" />
+
+		</attentionLine>
+
+		<acknowledgement typeCode="CR">
+
+			<targetMessage>
+
+				<id extension="US-EMA-20190823-AUTODUP-27096000"
+					root="2.16.840.1.113883.3.989.2.1.3.1" />
+
+			</targetMessage>
+
+			<acknowledgementDetail>
+
+				<text>safety report not loaded; Validated against 2.18 business
+					rules;
+
+					Comments: 1 - [[R18][N.1.5][BR.3]] :In section
+					ichicsrbatchwrapper on field
+					Date of Batch Transmission - N.1.5
+					Value: 20250101101010 Reported
+					error FutureDate NOT Valid Date: The
+					value of Date of Batch
+					Transmission - N.1.5 20250101101010 is in the
+					future.;
+
+					2 - [[R19][N.1.5][BR.4]] :In section ichicsrbatchwrapper on
+					field
+					Date of Batch Transmission - N.1.5 Value: 20250101101010
+					Reported
+					error FutureDate NOT Valid Date: The value of Date of Batch
+					Transmission - N.1.5 20250101101010 is in the future.;
+
+					Parsing
+					process: Report with Errors
+				</text>
+
+			</acknowledgementDetail>
+
+		</acknowledgement>
+
+	</MCCI_IN000002UV01>
+
+	<MCCI_IN000002UV01>
+
+		<id root="2.16.840.1.113883.3.989.2.1.3.19" />
+
+		<creationTime value="20200925133715" />
+
+		<interactionId extension="MCCI_IN000002UV01"
+			root="2.16.840.1.113883.1.6" />
+
+		<processingCode code="P" />
+
+		<processingModeCode code="T" />
+
+		<acceptAckCode code="NE" />
+
+		<receiver typeCode="RCV">
+
+			<device classCode="DEV" determinerCode="INSTANCE">
+
+				<id extension="ORG100017123"
+					root="2.16.840.1.113883.3.989.2.1.3.16" />
+
+			</device>
+
+		</receiver>
+
+		<sender typeCode="SND">
+
+			<device classCode="DEV" determinerCode="INSTANCE">
+
+				<id extension="EVHUMAN" root="2.16.840.1.113883.3.989.2.1.3.15" />
+
+			</device>
+
+		</sender>
+
+		<attentionLine>
+
+			<keyWordText code="1"
+				codeSystem="2.16.840.1.113883.3.989.2.1.1.24"
+				codeSystemVersion="2.0" displayName="dateOfIcsrMessageCreation" />
+
+			<value value="20150101101010" xsi:type="TS" />
+
+		</attentionLine>
+
+		<acknowledgement typeCode="CR">
+
+			<targetMessage>
+
+				<id extension="US-EMA-20190823-AUTODUP-27096003"
+					root="2.16.840.1.113883.3.989.2.1.3.1" />
+
+			</targetMessage>
+
+			<acknowledgementDetail>
+
+				<text>safety report not loaded; Validated against 2.18 business
+					rules;
+
+					Comments: 1 - [[R18][N.1.5][BR.3]] :In section
+					ichicsrbatchwrapper on field
+					Date of Batch Transmission - N.1.5
+					Value: 20250101101010 Reported
+					error FutureDate NOT Valid Date: The
+					value of Date of Batch
+					Transmission - N.1.5 20250101101010 is in the
+					future.;
+
+					2 - [[R19][N.1.5][BR.4]] :In section ichicsrbatchwrapper on
+					field
+					Date of Batch Transmission - N.1.5 Value: 20250101101010
+					Reported
+					error FutureDate NOT Valid Date: The value of Date of Batch
+					Transmission - N.1.5 20250101101010 is in the future.;
+
+					Parsing
+					process: Report with Errors
+				</text>
+
+			</acknowledgementDetail>
+
+		</acknowledgement>
+
+	</MCCI_IN000002UV01>
+
+	<receiver typeCode="RCV">
+
+		<device classCode="DEV" determinerCode="INSTANCE">
+
+			<id extension="ORG100017123"
+				root="2.16.840.1.113883.3.989.2.1.3.18" />
+
+		</device>
+
+	</receiver>
+
+	<sender typeCode="SND">
+
+		<device classCode="DEV" determinerCode="INSTANCE">
+
+			<id extension="EVHUMAN" root="2.16.840.1.113883.3.989.2.1.3.17" />
+
+		</device>
+
+	</sender>
+
+	<attentionLine>
+
+		<keyWordText code="2"
+			codeSystem="2.16.840.1.113883.3.989.2.1.1.24" codeSystemVersion="2.0"
+			displayName="acknowledgementLocalMessageNumber" />
+
+		<value root="2.16.840.1.113883.3.989.2.1.3.21" xsi:type="II" />
+
+	</attentionLine>
+
+	<attentionLine>
+
+		<keyWordText code="3"
+			codeSystem="2.16.840.1.113883.3.989.2.1.1.24" codeSystemVersion="2.0"
+			displayName="dateOfIcsrBatchTransmission" />
+
+		<value value="20250101101010" xsi:type="TS" />
+
+	</attentionLine>
+
+	<acknowledgement typeCode="AR">
+
+		<targetBatch>
+
+			<id extension="N129931a59d-fef2-4ac4-8197-1a7be252e0f0"
+				root="2.16.840.1.113883.3.989.2.1.3.22" />
+
+		</targetBatch>
+
+		<acknowledgementDetail>
+
+			<text>Batch message processed with errors</text>
+
+		</acknowledgementDetail>
+
+	</acknowledgement>
+
+</MCCI_IN200101UV01>
+

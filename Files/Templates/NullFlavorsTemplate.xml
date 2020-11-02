@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<MCCI_IN200100UV01>
+		<low nullFlavor="NI" />
+		<high nullFlavor="NI" />
+		<name nullFlavor="NI" />
+		<id nullFlavor="NI"/>
+		<streetAddressLine nullFlavor="NI"/>
+										<city nullFlavor="NI"/>
+										<country nullFlavor="NI"/>
+										<postalCode nullFlavor="NI"/>
+										<effectiveTime  nullFlavor="NI"/>	
+										<availabilityTime nullFlavor="NI"/>	
+										 <value xsi:type="CE" nullFlavor="NI"/> 
+		<code nullFlavor="NI"/>	
+<methodCode	nullFlavor="NI"/>
+<state nullFlavor="NI"/>
+											<period nullFlavor="NI"/>
+											<given nullFlavor="NI"/>
+											<prefix nullFlavor="NI"/>
+											
+<translation nullFlavor="NI"/>
+<numerator nullFlavor="NI"/>
+<denominator nullFlavor="NI"/>
+<text nullFlavor="NI"/>
+<creationTime nullFlavor="NI"/>
+<versionCode nullFlavor="NI"/>
+<profileId nullFlavor="NI"/>
+<family nullFlavor="NI"/>
+<originalText nullFlavor="NI"/>
+<telecom nullFlavor="NI"/>
+<telecom postalCode="NI"/>
+<expirationTime nullFlavor="NI"/>
+<routeCode nullFlavor="NI"/>
+<genderStatusCode nullFlavor="NI"/>
+<lotNumberText nullFlavor="NI"/>
+ <interpretationCode nullFlavor="NI"/> 
+ <quantity nullFlavor="NI"/> 
+ <administrativeGenderCode nullFlavor="NI"/> 
+ <period nullFlavor="NI"/>
+ <title nullFlavor="NI"/>
+ <formCode nullFlavor="NI"/>
+ <width nullFlavor="NI"/>
+<Boolean>
+ <value xsi:type="BL" nullFlavor="NI"/>
+</Boolean>
+ 
+</MCCI_IN200100UV01>

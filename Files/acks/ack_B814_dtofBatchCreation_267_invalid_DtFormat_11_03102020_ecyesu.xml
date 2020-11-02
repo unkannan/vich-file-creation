@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MCCI_IN200101UV01 xsi:schemaLocation="urn:hl7-org:v3 http://eudravigilance.ema.europa.eu/xsd/vich/multicacheschemas/MCCI_IN200101UV01.xsd" xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <id root="2.16.840.1.113883.3.989.2.1.3.20" extension="EU-EC-M-XMLVALACK-INVALID-ACK"/>
+    <creationTime value="20201005071642"/>
+    <responseModeCode code="D"/>
+    <interactionId root="2.16.840.1.113883.1.6" extension="MCCI_IN200101UV01"/>
+    <MCCI_IN000002UV01>
+        <id root="2.16.840.1.113883.3.989.2.1.3.19" extension="EU-EC-INVALID"/>
+        <creationTime value="20201005071642"/>
+        <interactionId root="2.16.840.1.113883.1.6" extension="MCCI_IN000002UV01"/>
+        <processingCode code="P"/>
+        <processingModeCode code="T"/>
+        <acceptAckCode code="NE"/>
+        <receiver typeCode="RCV">
+            <device classCode="DEV" determinerCode="INSTANCE">
+                <id root="2.16.840.1.113883.3.989.2.1.3.16" extension="ZZELANCO"/>
+            </device>
+        </receiver>
+        <sender typeCode="SND">
+            <device classCode="DEV" determinerCode="INSTANCE">
+                <id root="2.16.840.1.113883.3.989.2.1.3.15" extension="EVVETPROD"/>
+            </device>
+        </sender>
+        <attentionLine>
+            <keyWordText code="1" codeSystem="2.16.840.1.113883.3.989.2.1.1.24" codeSystemVersion="2.0" displayName="dateOfIcsrMessageCreation"/>
+            <value xsi:type="TS" value="20200228114439"/>
+        </attentionLine>
+        <acknowledgement typeCode="CA">
+            <targetMessage>
+                <id root="2.16.840.1.113883.3.989.2.1.3.1" extension="Message_B814_dtofBatchCreation_267_invalid_DtFormat_11_03102020"/>
+            </targetMessage>
+            <acknowledgementDetail>
+                <text>adverse event report loaded; Validated against 3.00 business rules;
+                    Comments: Parsing process: Correct report;
+</text>
+            </acknowledgementDetail>
+        </acknowledgement>
+    </MCCI_IN000002UV01>
+    <receiver typeCode="RCV">
+        <device classCode="DEV" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.989.2.1.3.18" extension="ZZELANCO"/>
+        </device>
+    </receiver>
+    <sender typeCode="SND">
+        <device classCode="DEV" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.989.2.1.3.17" extension="EVVETPROD"/>
+        </device>
+    </sender>
+    <attentionLine>
+        <keyWordText code="2" codeSystem="2.16.840.1.113883.3.989.2.1.1.24" codeSystemVersion="2.0" displayName="acknowledgementLocalMessageNumber"/>
+        <value xsi:type="II" root="2.16.840.1.113883.3.989.2.1.3.21" extension="EU-EC-M-XMLVALACK-INVALID"/>
+    </attentionLine>
+    <attentionLine>
+        <keyWordText code="3" codeSystem="2.16.840.1.113883.3.989.2.1.1.24" codeSystemVersion="2.0" displayName="dateOfIcsrBatchTransmission"/>
+        <value xsi:type="TS" value="20201005071636"/>
+    </attentionLine>
+    <acknowledgement typeCode="AE">
+        <targetBatch>
+            <id root="2.16.840.1.113883.3.989.2.1.3.22" extension="Batch_B814_dtofBatchCreation_267_invalid_DtFormat_11_03102020"/>
+        </targetBatch>
+        <acknowledgementDetail>
+            <text>Batch message processed with errors:
+NOT Valid Date: The value of Date of Batch Creation -  is in the future</text>
+        </acknowledgementDetail>
+    </acknowledgement>
+</MCCI_IN200101UV01>

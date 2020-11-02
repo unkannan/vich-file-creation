@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MCCI_IN200101UV01 xsi:schemaLocation="urn:hl7-org:v3 http://eudravigilance.ema.europa.eu/xsd/vich/multicacheschemas/MCCI_IN200101UV01.xsd" xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <id root="2.16.840.1.113883.3.989.2.1.3.20" extension="EU-EC-M-20000005314-ACK"/>
+    <creationTime value="20201005071625"/>
+    <responseModeCode code="D"/>
+    <interactionId root="2.16.840.1.113883.1.6" extension="MCCI_IN200101UV01"/>
+    <MCCI_IN000002UV01>
+        <id root="2.16.840.1.113883.3.989.2.1.3.19" extension="EU-EC-20000005314"/>
+        <creationTime value="20201005071625"/>
+        <interactionId root="2.16.840.1.113883.1.6" extension="MCCI_IN000002UV01"/>
+        <processingCode code="P"/>
+        <processingModeCode code="T"/>
+        <acceptAckCode code="NE"/>
+        <receiver typeCode="RCV">
+            <device classCode="DEV" determinerCode="INSTANCE">
+                <id root="2.16.840.1.113883.3.989.2.1.3.16" extension="EVVETWT"/>
+            </device>
+        </receiver>
+        <sender typeCode="SND">
+            <device classCode="DEV" determinerCode="INSTANCE">
+                <id root="2.16.840.1.113883.3.989.2.1.3.15" extension="EVVETPROD"/>
+            </device>
+        </sender>
+        <attentionLine>
+            <keyWordText code="1" codeSystem="2.16.840.1.113883.3.989.2.1.1.24" codeSystemVersion="2.0" displayName="dateOfIcsrMessageCreation"/>
+            <value xsi:type="TS" value="20200228114439"/>
+        </attentionLine>
+        <acknowledgement typeCode="CA">
+            <targetMessage>
+                <id root="2.16.840.1.113883.3.989.2.1.3.1" extension="Message_B21_BrandName_removeSubNull_146_rule_8_03102020"/>
+            </targetMessage>
+            <acknowledgementDetail>
+                <text>adverse event report loaded; Validated against 3.00 business rules;
+                    Comments: Parsing process: Correct report;
+                    Classification: new: EU-EC-20000005312 = Replaced Report - old: EU-EC-20000005312 = Case Report
+</text>
+            </acknowledgementDetail>
+        </acknowledgement>
+    </MCCI_IN000002UV01>
+    <receiver typeCode="RCV">
+        <device classCode="DEV" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.989.2.1.3.18" extension="EVVETWT"/>
+        </device>
+    </receiver>
+    <sender typeCode="SND">
+        <device classCode="DEV" determinerCode="INSTANCE">
+            <id root="2.16.840.1.113883.3.989.2.1.3.17" extension="EVVETPROD"/>
+        </device>
+    </sender>
+    <attentionLine>
+        <keyWordText code="2" codeSystem="2.16.840.1.113883.3.989.2.1.1.24" codeSystemVersion="2.0" displayName="acknowledgementLocalMessageNumber"/>
+        <value xsi:type="II" root="2.16.840.1.113883.3.989.2.1.3.21" extension="EU-EC-M-20000005314"/>
+    </attentionLine>
+    <attentionLine>
+        <keyWordText code="3" codeSystem="2.16.840.1.113883.3.989.2.1.1.24" codeSystemVersion="2.0" displayName="dateOfIcsrBatchTransmission"/>
+        <value xsi:type="TS" value="20200228114439"/>
+    </attentionLine>
+    <acknowledgement typeCode="AA">
+        <targetBatch>
+            <id root="2.16.840.1.113883.3.989.2.1.3.22" extension="Batch_B21_BrandName_removeSubNull_146_rule_8_03102020"/>
+        </targetBatch>
+        <acknowledgementDetail>
+            <text>Batch message processed without errors</text>
+        </acknowledgementDetail>
+    </acknowledgement>
+</MCCI_IN200101UV01>

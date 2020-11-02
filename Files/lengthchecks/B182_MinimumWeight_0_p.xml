@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><MCCI_IN200100UV01 xmlns="urn:hl7-org:v3" xmlns:date="http://exslt.org/dates-and-times" xmlns:mif="urn:hl7-org:v3/mif" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ITSVersion="XML_1.0" xsi:schemaLocation="urn:hl7-org:v3   http://eudravigilance.ema.europa.eu/XSD/vich/multicacheschemas/MCCI_IN200100UV01.xsd"><!--*************************** B.8.1.1.1 - B.8.1.1.2  
+		Batch Number/Identifier -->
+	<id extension="ABCDrug-20100328-batch-12345" root="SubmittingOrganizationID"/><!--***************************** B.8.1.4 
+		Date of Batch Creation -->
+	<creationTime value="20200228064439-0500"/><!--********************************* 
+		B.8.1.5 Message Version Number + Release Number -->
+	<responseModeCode/>
+	<versionCode code="VICHAER1.0.0"/>
+	<interactionId/>
+	<PORR_IN049006UV xsi:type="PORR_IN049006UV.MCCI_MT000100UV01.Message"><!--**************************************************** B.8.2.1.1 
+			- B.8.2.1.2 Message Number -->
+		<id extension="identifier" root="senders-safety-report-identifier-oid"/><!--**************************************************** 
+			B.8.2.4 Date of Message Creation -->
+		<creationTime value="20200228064439-0500"/>
+		<interactionId/><!--**************************************************** 
+			B.8.2.7 Profile ID -->
+		<profileId extension="AES.FDA.VICHGL42.M.V1.ACCOUNT.AE" root="2.16.840.1.113883.13.207"/>
+		<processingCode/>
+		<processingModeCode/>
+		<acceptAckCode/><!--***************** B.8.2.3 - B.8.2.3.1 Receiver of 
+			the message********************* -->
+		<receiver typeCode="RCV">
+			<device classCode="DEV" determinerCode="INSTANCE">
+				<id/>
+				<asAgent classCode="AGNT">
+					<representedOrganization classCode="ORG" determinerCode="INSTANCE">
+						<id extension="EVHUMAN" root="message-receiver-identifier-id"/>
+					</representedOrganization>
+				</asAgent>
+			</device>
+		</receiver>
+		<sender typeCode="SND"><!--**************************************************** 
+				B.8.2.2.1 - B.8.2.2.8 Message Sender Identifier (Technical Contact Person 
+				) -->
+			<device classCode="DEV" determinerCode="INSTANCE">
+				<id/>
+				<asAgent classCode="AGNT">
+					<representedOrganization classCode="ORG" determinerCode="INSTANCE"><!--**************************************************** 
+							B.8.2.2.1 Company name -->
+						 <id extension="EVHUMANWT" root="message-sender-identifier-id"/> 
+						<notificationParty classCode="CON">
+							<id/>
+							<contactPerson>
+								<id/>
+								<name>
+									<prefix>Mr.</prefix>
+									<given>givenname</given>
+									<family>familyname</family>
+								</name>
+								<telecom value="TEL:777777777"/>
+								<telecom value="FAX:777777777"/>
+								<telecom value="MAILTO:senderorganisation@gmail.com"/>
+							</contactPerson>
+						</notificationParty>
+					</representedOrganization>
+				</asAgent>
+			</device>
+		</sender><!--**************************************************** B.8.2.5 
+			Report Identifier, ie the MA Reference Number (NADA number) under which the 
+			report is being submitted -->
+		<attentionLine>
+			<keyWordText>Report Identifier</keyWordText>
+			<value xsi:type="ST">N123123</value>
+		</attentionLine><!--**************************************************** 
+			B.8.2.6 Third Country Indicator -->
+		<attentionLine>
+			<keyWordText>Domestic vs Foreign Report Category</keyWordText>
+			<value code="C62264" codeSystem="2.16.840.1.113883.13.212" displayName="Domestic" xsi:type="SC"/>
+		</attentionLine>
+		<controlActProcess classCode="CACT" moodCode="EVN">
+			<subject typeCode="SUBJ">
+				<investigationEvent classCode="INVSTG" moodCode="EVN"><!--**************************************************** A.4.1 
+						Unique AER Identification Number -->
+					<id extension="USA-GAPINDSY-2012-US-14973" root="1.2.3.4"/>
+					<code code="ICSR"/><!-- **************************************************** 
+						B.3.1 Narrative of AE -->
+					<text mediaType="text/plain">The sows and gilts were given the two
+						medications. Two days after receiving the chloratetracycline
+						penicillin combination in the feed the sows and gilts started
+						going off feed. A closer inspection of GAP7777 FOR USA-124578
+						indicated some kind of foreign contaminant in the Type A medicated
+						article bag. SUPPLEMENTAL:document number one was supplied by
+						attending vet. Document number two was supplied by ABC Labs, Inc.
+						at the request of the attending vet.
+						SUPPLEMENTAL DOCUMENTS:
+						1.Other-FDA HL7 additional text</text>
+					<statusCode/><!-- **************************************************** 
+						A.4.3 date and time message sent -->
+					<availabilityTime value="20200228"/>
+					<reference typeCode="REFR">
+						<document classCode="DOC" moodCode="EVN">
+							<id extension="1"/><!-- **************************************************** 
+								B.7.1.1 Attached document type -->
+							<code code="C17649" codeSystem="2.16.840.1.113883.13.211" displayName="Other"/><!--**************************************************** 
+								B.7.1 Attached document filename -->
+							<title>1_Additional_info.txt</title><!--**************************************************** 
+								B.7 Attached document as a text file -->
+							<text mediaType="text/plain" representation="B64">UGF0aWVudCBicmVlZDogQXNzZXNzbWVudCByZWFzb246Cgo=</text>
+						</document>
+					</reference>
+					<component typeCode="COMP">
+						<adverseEventAssessment classCode="INVSTG" moodCode="EVN">
+							<subject1 typeCode="SBJ">
+								<primaryRole classCode="INVSBJ"><!-- **************************************************** 
+										Pure Product case no patient information -->
+									<player2 classCode="ANM" determinerCode="INSTANCE"><!-- **************************************************** 
+											B.1.3 species -->
+										  <code code="CTT" codeSystem="2.16.840.1.113883.4.341" displayName="Cattle"/><!--**************************************************** 
+											B.1.1 no of animals treated -->
+										 <quantity value="3" xsi:type="PQ"/> <!--**************************************************** 
+											B.1.5 gender -->
+										 <administrativeGenderCode code="C16576" codeSystem="2.16.840.1.113883.13.198" displayName="FEMALE"/>   <!--**************************************************** 
+											B.1.6 reproductive status code -->
+										    <genderStatusCode code="C62399" codeSystem="2.16.840.1.113883.13.199" displayName="INTACT"/>  
+										</player2><!--**************************************************** 
+										B.1.2 no of animals reacted -->
+									<subjectOf2 typeCode="SBJ">
+										<observation classCode="OBS" moodCode="EVN ">
+											<code code="T95005" codeSystem="2.16.840.1.113883.13.206" displayName="Number of Animals Affected"/>
+											<value value="3" xsi:type="INT"/>
+										</observation>
+									</subjectOf2><!--**************************************************** 
+										B.3.8.1 Ongoing -->
+									<subjectOf2 typeCode="SBJ">
+										<observation classCode="OBS" moodCode="EVN">
+											<code code="C53279" codeSystem="2.16.840.1.113883.13.206" displayName="Ongoing"/>
+											<value value="3" xsi:type="INT"/>
+										</observation>
+									</subjectOf2><!--**************************************************** 
+										B.3.8.2 Recovered -->
+									<subjectOf2 typeCode="SBJ">
+										<observation classCode="OBS" moodCode="EVN">
+											<code code="C82467" codeSystem="2.16.840.1.113883.13.206" displayName="Recovered/Normal"/>
+											<value nullFlavor="NI" xsi:type="INT"/>
+										</observation>
+									</subjectOf2><!--**************************************************** 
+										B.3.8.3 Alive with sequela -->
+									<subjectOf2 typeCode="SBJ">
+										<observation classCode="OBS" moodCode="EVN">
+											<code code="C49495" codeSystem="2.16.840.1.113883.13.206" displayName="Recovered with Sequela"/>
+											<value nullFlavor="NI" xsi:type="INT"/>
+										</observation>
+									</subjectOf2><!-- **************************************************** 
+										B.3.8.4 Died -->
+									<subjectOf2 typeCode="SBJ">
+										<observation classCode="OBS" moodCode="EVN">
+											<code code="C28554" codeSystem="2.16.840.1.113883.13.206" displayName="Died"/>
+											<value nullFlavor="NI" xsi:type="INT"/>
+										</observation>
+									</subjectOf2><!--**************************************************** 
+										B.3.8.5 Euthanised -->
+									<subjectOf2 typeCode="SBJ">
+										<observation classCode="OBS" moodCode="EVN">
+											<code code="C21115" codeSystem="2.16.840.1.113883.13.206" displayName="Euthanized"/>
+											<value nullFlavor="NI" xsi:type="INT"/>
+										</observation>
+									</subjectOf2><!--**************************************************** 
+										B.3.8.6 Unknown -->
+									<subjectOf2 typeCode="SBJ">
+										<observation classCode="OBS" moodCode="EVN">
+											<code code="C17998" codeSystem="2.16.840.1.113883.13.206" displayName="Outcome Unknown"/>
+											<value nullFlavor="NI" xsi:type="INT"/>
+										</observation>
+									</subjectOf2><!--**************************************************** 
+										B.1.7 female physiological status -->
+									<subjectOf2 typeCode="SBJ">
+										<observation classCode="OBS" moodCode="EVN">
+											<code code="T95010" codeSystem="2.16.840.1.113883.13.206" displayName="Female Physiological Status"/>
+											<value code="NPL" codeSystem=" 2.16.840.1.113883.13.49 " displayName="NONPREGNANT LACTATING" xsi:type="CE"/>   
+										</observation>
+									</subjectOf2><!--**************************************************** 
+										B.1.9.2 age -->
+									<subjectOf2 typeCode="SBJ">
+										<observation classCode="OBS" moodCode="EVN ">
+											<code code="T95012" codeSystem="2.16.840.1.113883.13.206" displayName="Age"/>
+												<value xsi:type="IVL_PQ">
+													<low unit="mo" value="7"/>
+													<high unit="a" value="3"/>
+												</value>
+												<methodCode code="C25498" codeSystem="2.16.840.1.113883.13.200" displayName="ESTIMATED"/> 
+										</observation>
+									</subjectOf2><!--**************************************************** 
+										B.1.8.2 weight -->
+									<subjectOf2 typeCode="SBJ">
+										<observation classCode="OBS" moodCode="EVN ">
+											<code code="T95011" codeSystem="2.16.840.1.113883.13.206" displayName="Weight"/>
+											<value xsi:type="IVL_PQ">
+												<low unit="kg" value=""/> 
+												<high unit="kg" value="225"/> 
+											</value>
+											  <methodCode code="C44473" codeSystem="2.16.840.1.113883.13.200" displayName="MEASURED"/> 
+										</observation>
+									</subjectOf2>
+									<subjectOf2 typeCode="SBJ">
+										<observation classCode="OBS" moodCode="EVN ">
+											<code code="T95007" codeSystem="2.16.840.1.113883.13.206" displayName="Are Animals Crossbred"/><!--**************************************************** 
+												B.1.4.1 Pure / Crossbred Indicator -->
+											  <value value="false" xsi:type="BL"/> 
+											<inboundRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="T95008" codeSystem="2.16.840.1.113883.13.206" displayName="Breed Components"/><!--**************************************************** 
+														B.1.4 Breed - pure breed -->
+													  <value code="Pig33" codeSystem="2.16.840.1.113883.4.342" displayName="Duroc" xsi:type="CE"/>
+												</observation>
+											</inboundRelationship>
+										</observation>
+									</subjectOf2>
+									<subjectOf2 typeCode="SBJ">
+										<observation classCode="OBS" moodCode="EVN ">
+											<code code="T95007" codeSystem="2.16.840.1.113883.13.206" displayName="Are Animals Crossbred"/><!--**************************************************** 
+												B.1.4.1 Pure / Crossbred Indicator -->
+											<value value="true" xsi:type="BL"/> 
+											<inboundRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="T95008" codeSystem="2.16.840.1.113883.13.206" displayName="Breed Components"/><!--**************************************************** 
+														B.1.4 Breed - crossbred -->
+													<value nullFlavor="NI" xsi:type="CE"/>
+												</observation>
+											</inboundRelationship>
+										</observation>
+									</subjectOf2><!--**************************************************** 
+										B.1.2.1 animal condition prior to treatment -->
+									<subjectOf2 typeCode="SBJ">
+										<observation classCode="OBS" moodCode="EVN ">
+											<code code="T95006" codeSystem="2.16.840.1.113883.13.206" displayName="Assessment of Health Status Prior to the Exposure to Product"/>
+											  <value code="C82488" codeSystem="2.16.840.1.113883.13.197" displayName="EXCELLENT" xsi:type="CE"/> 
+											<author typeCode="AUT">
+												<assignedEntity classCode="ASSIGNED">
+													<code code="C82470" codeSystem="2.16.840.1.113883.13.194" displayName="Veterinarian"/>
+												</assignedEntity>
+											</author>
+										</observation>
+									</subjectOf2><!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ --><!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ START of 
+										B.2.1 Submitted suspect product --><!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+									<subjectOf2 typeCode="SBJ">
+										<substanceAdministration classCode="SBADM" moodCode="EVN">
+											<id extension="1" root="1.2.3.4"/>
+											<effectiveTime xsi:type="SXPR_TS">
+												<comp xsi:type="IVL_TS"><!--**************************************************** 
+														B.2.1.7.1.3.2 Date of First Exposure -->
+													 <low value="20060601"/> <!--**************************************************** 
+														B.2.1.7.1.3.3 Date of Last Exposure -->
+													 <high value="20060602"/>
+												</comp>
+												<comp xsi:type="PIVL_TS"><!--**************************************************** 
+														B.2.1.7.1.3.1 Interval / Frequency of Administration -->
+													 <period unit="h" value="8"/>
+												</comp>
+											</effectiveTime><!--**************************************************** 
+												B.2.1.7 route of administration -->
+											 <routeCode code="C38288" codeSystem="2.16.840.1.113883.13.202" displayName="Oral">
+											 </routeCode>
+											   <!--**************************************************** 
+												B.2.1.7.1- B.2.1.7.2 Dose Administration -->
+											<doseCheckQuantity>
+												<numerator value="2" xsi:type="PQ"> 
+												<translation code="C48549" codeSystem="'2.16.840.1.113883.13.203" displayName="Tube"/> 
+												</numerator>     
+												<denominator value="1" xsi:type="PQ">      
+												<translation code="C94851" codeSystem="2.16.840.1.113883.13.204" displayName="Quarter"/>   
+												</denominator> 
+											</doseCheckQuantity>
+											<consumable typeCode="CSM">
+												<instanceOfKind classCode="INST">
+													<productInstanceInstance classCode="MMAT" determinerCode="INSTANCE">
+														<id extension="1"/><!--**************************************************** 
+															B.2.6.2 manufacturing date -->
+														  <existenceTime xsi:type="IVL_TS">                         
+														  <low value="20051208"/>                     
+														  </existenceTime> 
+														  <!--**************************************************** 
+															B.2.3 Lot Number (Product Lot Number) -->
+														 <lotNumberText mediaType="text/plain">GAP3487 FOR USA-123479</lotNumberText><!--**************************************************** 
+															B.2.3.1 Lot Expiry date -->
+														 <expirationTime value="20060405"/> 
+													</productInstanceInstance>
+													<kindOfProduct classCode="MMAT" determinerCode="KIND"><!--****************************************************   <code codeSystem="2.16.840.1.113883.6.69" code="01234-444/> 
+															B.2.1.1 VMP Product code (as NDC code) -->
+															<code code="01234-*444" codeSystem="2.16.840.1.113883.6.69"/> 
+														<!--**************************************************** 
+														B.2.1 Registered or brand name - mandatory -->
+														<name xsi:type="TN">Onsior 6 mg</name><!-- **************************************************** 
+															B.2.2.2 Dosage Form -->
+														<formCode code="C42998" codeSystem="2.16.840.1.113883.13.205" displayName="Tablet"/>
+														<asManufacturedProduct classCode="MANU">
+															<manufacturerOrganization classCode="ORG" determinerCode="INSTANCE"><!--**************************************************** 
+																	B.2.1.4 Manufacturer -->
+																<name>Elanco Animal Health Inc.</name>
+															</manufacturerOrganization>
+															<subjectOf typeCode="SBJ">
+																<approval classCode="CNTRCT" moodCode="EVN"><!--**************************************************** 
+																		B.2.1.2 Registration Number / NADA number -->
+																	<id extension="USA-USFDACVM-N141320"/>
+																</approval>
+															</subjectOf>
+														</asManufacturedProduct>
+														<instanceOfKind classCode="INST">
+															<productInstanceInstance/>
+															<subjectOf typeCode="SBJ"><!--**************************************************** 
+																	B.2.6.1 Manufacturer's DUNS / FEI number --><!--**************************************************** 
+																	B.2.6.1.1 Manufacturer's type -->
+																<productEvent classCode="ACT" moodCode="EVN">
+																	<performer typeCode="PRF">
+																		<assignedEntity classCode="ASSIGNED">
+																			<representedOrganization classCode="ORG" determinerCode="INSTANCE">
+																				<id nullFlavor="NI"/>
+																			</representedOrganization>
+																		</assignedEntity>
+																	</performer>
+																</productEvent>
+															</subjectOf>
+															<subjectOf typeCode="SBJ">
+																<observationEvent classCode="OBS" moodCode="EVN">
+																	<code code="T95017" codeSystem="2.16.840.1.113883.13.206" displayName="Number of Defective Items"/><!--**************************************************** 
+																		B.2.6.3 Number of Defective Items -->
+																	<value nullFlavor="NI" xsi:type="PQ">
+																		<translation nullFlavor="NI"/>
+																	</value>
+																</observationEvent>
+															</subjectOf>
+															<subjectOf typeCode="SBJ">
+																<observationEvent classCode="OBS" moodCode="EVN">
+																	<code code="T95018" codeSystem="2.16.840.1.113883.13.206" displayName="Number of Items Returned"/><!--**************************************************** 
+																		B.2.6.4 Number of Defective Items Returned -->
+																	<value nullFlavor="NI" xsi:type="PQ">
+																		<translation nullFlavor="NI"/>
+																	</value>
+																</observationEvent>
+															</subjectOf>
+														</instanceOfKind>
+														<asSpecializedKind classCode="GEN ">
+															<generalizedMaterialKind classCode="MAT" determinerCode="KIND"><!--**************************************************** 
+																	B.2.1.3 ATC vet code -->
+																<code code="T95013" codeSystem="2.16.840.1.113883.13.206" displayName="ATCvet Code"/>
+																<name xsi:type="TN">QM01AH91</name>
+															</generalizedMaterialKind>
+														</asSpecializedKind>
+														<ingredient classCode="INGR">
+															<quantity><!--**************************************************** 
+																	B.2.2.1.1 Strength (Numerator) 1st ingredient -->
+																<numerator value="6" xsi:type="PQ"><!--**************************************************** 
+																		B.2.2.1.1.1 Strength (Numerator) unit 1st ingredient -->
+																	<translation code="mg" codeSystem="2.16.840.1.113883.6.8" displayName="mg"/>
+																</numerator><!--**************************************************** 
+																	B.2.2.1.2 Strength (Denominator) 1st ingredient -->
+																<denominator value="1" xsi:type="PQ"><!--**************************************************** 
+																		B.2.2.1.2.1 Strength (Denominator) unit 1st ingredient -->
+																	<translation code="C25488" codeSystem="2.16.840.1.113883.13.203" displayName="dose"/>
+																</denominator>
+															</quantity>
+															<ingredientSubstance classCode="MMAT" determinerCode="KIND"><!--**************************************************** 
+																	B.2.2.1.3 Active Ingredient Code 1st ingredient -->
+																<code code="Z588009C7C" codeSystem="2.16.840.1.113883.4.9"/><!--**************************************************** 
+																	B.2.2.1 Active Ingredient(s) (Ingredient Name) 1st ingredient -->
+																<name xsi:type="TN">robenacoxib</name>
+															</ingredientSubstance>
+														</ingredient>
+													</kindOfProduct>
+													<subjectOf typeCode="SBJ">
+														<observationEvent classCode="OBS" moodCode="EVN">
+															<code code="T95019" codeSystem="2.16.840.1.113883.13.206" displayName="ORA District Field Office Reported"/><!--**************************************************** 
+																B.2.6.5 ORA District Field Office Reported -->
+															<value nullFlavor="NI" xsi:type="CE"/>
+														</observationEvent>
+													</subjectOf>
+												</instanceOfKind>
+											</consumable>
+											<performer typeCode="PRF">
+												<assignedEntity classCode="ASSIGNED"><!--**************************************************** 
+														B.2.4 Who Administered the VMP (Administered or Performed by) -->
+													  <code code="C82468" codeSystem="2.16.840.1.113883.13.208" displayName="ANIMAL OWNER"/>
+												</assignedEntity>
+											</performer><!--**************************************************** 
+												B.2.5 Use According to Label (Use According to Label) -->
+											<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="T95015" codeSystem="2.16.840.1.113883.13.206" displayName="Use According to Label"/>
+													<value value="false" xsi:type="BL"/>
+												</observation>
+											</outboundRelationship2><!--**************************************************** 
+												B.2.5.1- B.2.5.9 Explanation for Off-Label Use -->
+											<outboundRelationship2 contextConductionInd="true" typeCode="PERT"><!-- B.2.5.1 Reason for 
+													improper use -->
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="T95016" codeSystem="2.16.840.1.113883.13.206" displayName="VICH Label Use"/><!-- 1) Misuse - species -->
+													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
+														<observation classCode="OBS" moodCode="EVN">
+															<code code="T95028" codeSystem="2.16.840.1.113883.13.206" displayName="Species Off-Label "/>
+															<value nullFlavor="NI" xsi:type="BL"/>
+														</observation>
+													</outboundRelationship2><!-- 2) Misuse - Route -->
+													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
+														<observation classCode="OBS" moodCode="EVN">
+															<code code="T95029" codeSystem="2.16.840.1.113883.13.206" displayName="Route Off-Label"/>
+															<value nullFlavor="NI" xsi:type="BL"/>
+														</observation>
+													</outboundRelationship2><!-- 3) Misuse - Overdose -->
+													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
+														<observation classCode="OBS" moodCode="EVN">
+															<code code="T95030" codeSystem="2.16.840.1.113883.13.206" displayName="Overdosed"/>
+															 <value value="true" xsi:type="BL"/>
+														</observation>
+													</outboundRelationship2><!-- 4) Misuse - Underdose -->
+													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
+														<observation classCode="OBS" moodCode="EVN">
+															<code code="T95031" codeSystem="2.16.840.1.113883.13.206" displayName="Underdosed"/>
+															<value nullFlavor="NI" xsi:type="BL"/>
+														</observation>
+													</outboundRelationship2><!-- 5) Misuse - Treatment regimen -->
+													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
+														<observation classCode="OBS" moodCode="EVN">
+															<code code="T95032" codeSystem="2.16.840.1.113883.13.206" displayName="Treatment regimen Off-Label"/>
+															<value nullFlavor="NI" xsi:type="BL"/>
+														</observation>
+													</outboundRelationship2><!-- 6) Misuse - Indication -->
+													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
+														<observation classCode="OBS" moodCode="EVN">
+															<code code="T95033" codeSystem="2.16.840.1.113883.13.206" displayName="Indication Off-Label"/>
+															<value nullFlavor="NI" xsi:type="BL"/>
+														</observation>
+													</outboundRelationship2><!-- 7) Misuse - Storage condition -->
+													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
+														<observation classCode="OBS" moodCode="EVN">
+															<code code="T95034" codeSystem="2.16.840.1.113883.13.206" displayName="Storage condition Off-Label"/>
+															<value nullFlavor="NI" xsi:type="BL"/>
+														</observation>
+													</outboundRelationship2><!-- 8) Misuse - Expired product -->
+													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
+														<observation classCode="OBS" moodCode="EVN">
+															<code code="T95035" codeSystem="2.16.840.1.113883.13.206" displayName="Product expired"/>
+															<value nullFlavor="NI" xsi:type="BL"/>
+														</observation>
+													</outboundRelationship2><!-- 9) Misuse - other -->
+													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
+														<observation classCode="OBS" moodCode="EVN">
+															<code code="T95036" codeSystem="2.16.840.1.113883.13.206" displayName="Other off label issue"/>
+															<value nullFlavor="NI" xsi:type="BL"/>
+														</observation>
+													</outboundRelationship2>
+												</observation>
+											</outboundRelationship2><!--**************************************************** 
+												B.3.9 Previous Exposure to the VMP -->
+											<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="T95024" codeSystem="2.16.840.1.113883.13.206" displayName="Previous Exposure to the VMP"/>
+													    <value value="true" xsi:type="BL"/> 
+												</observation>
+											</outboundRelationship2><!--**************************************************** 
+												B.3.10 Previous AE to the VMP -->
+											<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="T95025" codeSystem="2.16.840.1.113883.13.206" displayName="Previous AE to the VMP"/>
+													 <value value="false" xsi:type="BL"/> 
+												</observation>
+											</outboundRelationship2><!--**************************************************** 
+												B.4.1 Dechallenge to the VMP -->
+											<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="T95026" codeSystem="2.16.840.1.113883.13.206" displayName="Did AE Abate After Stopping the VMP "/>
+													  <value value="false" xsi:type="BL"/> 
+												</observation>
+											</outboundRelationship2><!--**************************************************** 
+												B.4.2 Rechallenge to the VMP -->
+											<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
+												<observation classCode="OBS" moodCode="EVN">
+													<code code="T95027" codeSystem="2.16.840.1.113883.13.206" displayName="Did AE Reappear After Re-introducing the VMP"/>
+													 <value value="false" xsi:type="BL"/> 
+												</observation>
+											</outboundRelationship2>
+										</substanceAdministration>
+									</subjectOf2><!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ --><!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ END of B.2.1Submitted 
+										suspect product --><!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ --><!--**************************************************** 
+										B.3.3 Date of Onset of AE/PP -->
+									<subjectOf2 typeCode="SBJ">
+										<observation classCode="OBS" moodCode="EVN">
+											<code code="T95020" codeSystem="2.16.840.1.113883.13.206" displayName="Reaction"/>
+											<effectiveTime xsi:type="IVL_TS">
+												   <low value="20060608"/> <!--**************************************************** 
+													B.3.5.1 Duration (AE Duration) and AE Duration Time Units -->
+												 <width unit="d" value="5"/> 
+											</effectiveTime><!--**************************************************** 
+												B.3.2 Adverse Clinical Manifestations (VedDRA LLT Term Name) -->
+											<value code="2283" codeSystem="2.16.840.1.113883.4.358" codeSystemVersion="13" displayName="Product problem" xsi:type="CE"/><!--**************************************************** 
+												B.3.2.1.1 Number of patients affected - accuracy -->
+											<referenceRange>
+												<observationRange classCode="OBS" moodCode="EVN.CRT">
+													 <value value="10" xsi:type="INT"/> 
+													<interpretationCode code="C25498" codeSystem="2.16.840.1.113883.13.209" displayName="Estimated"/>  
+												</observationRange>
+											</referenceRange>
+										</observation>
+									</subjectOf2>
+									<subjectOf2 typeCode="SBJ">
+										<observation classCode="OBS" moodCode="EVN">
+											<code code="T95021" codeSystem="2.16.840.1.113883.13.206" displayName="Length of Time Between Exposure to VMP and Onset of AE"/><!--**************************************************** 
+												B.3.4 Length of Time Between Exposure to VMP(s) and Onset of AE -->
+											 <value code="C82440" codeSystem="2.16.840.1.113883.13.50" displayName="&lt;12 hours" xsi:type="CE"/>
+										</observation>
+									</subjectOf2><!--**************************************************** 
+										B.3.7 Treatment of AE -->
+									<subjectOf2 typeCode="SBJ">
+										<observation classCode="OBS" moodCode="EVN">
+											<code code="T95023" codeSystem="2.16.840.1.113883.13.206" displayName="Treatment of AE"/>
+											<value value="true" xsi:type="BL"/> 
+										</observation>
+									</subjectOf2>
+								</primaryRole>
+							</subject1>
+							<component typeCode="COMP"><!--**************************************************** 
+									B.2.1.5 product MAH Assessment code -->
+								<causalityAssessment classCode="INVSTG" moodCode="EVN">
+									<value xsi:type="CE">
+										<originalText nullFlavor="NI"/>
+									</value>
+									<author typeCode="AUT">
+										<assignedEntity classCode="ASSIGNED">
+											<code code="T95001" codeSystem="2.16.840.1.113883.13.206" displayName="MAH"/>
+										</assignedEntity>
+									</author>
+									<subject2 typeCode="SUBJ">
+										<productUseReference classCode="INFO" moodCode="EVN">
+											<id extension="NI"/>
+										</productUseReference>
+									</subject2>
+								</causalityAssessment>
+							</component>
+							<component typeCode="COMP"><!--********************************** 
+									B.2.1.6 RA Assessment ***************** -->
+								<causalityAssessment classCode="INVSTG" moodCode="EVN">
+									<text>The reason for RA's causality assessment can put here. </text> 
+									<value code="C54154" codeSystem="2.16.840.1.113883.13.201" displayName="Probable" xsi:type="CE"/> 
+									<author typeCode="AUT">
+										<assignedEntity classCode="ASSIGNED">
+											<code code="T95009" codeSystem="2.16.840.1.113883.13.206" displayName="RA"/>
+										</assignedEntity>
+									</author>
+									<subject2 typeCode="SUBJ">
+										<productUseReference classCode="INFO" moodCode="EVN">
+											<id extension="1"/>
+										</productUseReference>
+									</subject2>
+								</causalityAssessment>
+							</component><!--**************************************************** 
+								B.5.1 Attending Vet's Level of Suspicion -->
+							<component typeCode="COMP">
+								<causalityAssessment classCode="INVSTG" moodCode="EVN">
+									  <value code="C82490" codeSystem="2.16.840.1.113883.13.210" displayName="Possible" xsi:type="CE"/> 
+									<author typeCode="AUT">
+										<assignedEntity classCode="ASSIGNED">
+											<code code="C82470" codeSystem="2.16.840.1.113883.13.194" displayName="Veterinarian"/>
+										</assignedEntity>
+									</author>
+								</causalityAssessment>
+							</component>
+						</adverseEventAssessment>
+					</component>
+					<outboundRelationship typeCode="SPRT">
+						<priorityNumber value="1"/>
+						<relatedInvestigation classCode="INVSTG" moodCode="EVN">
+							<code code="T95002" codeSystem="2.16.840.1.113883.13.206" displayName="Sourcereport"/><!--****************************************************** 
+								A.4.2 Original Receive Date -->
+							<effectiveTime value="20200218"/><!--**************************************************** 
+								A.3.1.1 Primary reporter -->
+							<participation typeCode="AUT">
+								<assignedEntity classCode="ASSIGNED">
+									<code code="C17649" codeSystem="2.16.840.1.113883.13.194" displayName="Other"/>
+									<addr use="WP">
+										<streetAddressLine nullFlavor="NI"/>
+										<city nullFlavor="NI"/>
+										<state>NC</state>
+										<postalCode>28467</postalCode>
+										<country>USA</country>
+									</addr>
+									<telecom value="TEL:777777777"/>
+									<telecom value="FAX:777777777"/>
+									<telecom value="MAILTO:senderorganisation@gmail.com"/>
+									<assignedPerson classCode="PSN" determinerCode="INSTANCE">
+										<name>
+											  <family>primaryReporterfirstname</family>                 
+											  <given>primaryReporterlastname</given> 
+										</name>
+										<asIdentifiedEntity classCode="IDENT">
+											<assigningOrganization classCode="ORG" determinerCode="INSTANCE">
+												<name>Prehistoric Pets Clinic</name>
+											</assigningOrganization>
+										</asIdentifiedEntity>
+									</assignedPerson>
+								</assignedEntity>
+							</participation>
+						</relatedInvestigation>
+					</outboundRelationship>
+					<outboundRelationship typeCode="SPRT">
+						<priorityNumber value="2"/>
+						<relatedInvestigation classCode="INVSTG" moodCode="EVN">
+							<code code="T95002" codeSystem="2.16.840.1.113883.13.206" displayName="Sourcereport"/><!-- **************************************************** 
+								A.3.2 Second reporter -->
+							<participation typeCode="AUT">
+								<assignedEntity classCode="ASSIGNED">
+									<code code="C82468" codeSystem="2.16.840.1.113883.13.194" displayName="Animal Owner"/>
+									<addr use="WP">
+										 <streetAddressLine>1st Old Street </streetAddressLine>    
+										 <city>SmallTown</city>            
+										 <state>AZ</state>           
+										 <postalCode>12345</postalCode>             
+										 <country>USA</country>   
+									</addr>
+									 <telecom value="TEL:+1-888-1234567"/>       
+									 <telecom value="FAX:+1-888-1234789"/>      
+									 <telecom value="MAILTO:vet1@example.com"/> 
+									<assignedPerson classCode="PSN" determinerCode="INSTANCE">
+										<name>
+											<family>Comedian</family>
+											 <given>Jim Carry</given> 
+										</name>
+										<asIdentifiedEntity classCode="IDENT">
+											<assigningOrganization classCode="ORG" determinerCode="INSTANCE">
+												<name nullFlavor="NI"/>
+											</assigningOrganization>
+										</asIdentifiedEntity>
+									</assignedPerson>
+								</assignedEntity>
+							</participation>
+						</relatedInvestigation>
+					</outboundRelationship><!--**************************************************** 
+						A.2 Sender = PV responsible person and company -->
+					<subjectOf1 typeCode="SUBJ">
+						<controlActEvent classCode="CACT" moodCode="EVN">
+							<author typeCode="AUT">
+								<assignedEntity classCode="ASSIGNED">
+									<code code="T95001" codeSystem="2.16.840.1.113883.13.206" displayName="MAH"/>
+									<addr use="WP">
+										<streetAddressLine>Building MON 6700</streetAddressLine>
+										<city>Leverkusen</city>
+										<state>NRW</state>
+										<postalCode>51368</postalCode>
+										<country>DEU</country>
+									</addr>
+									<representedOrganization classCode="ORG" determinerCode="INSTANCE">
+										<name>Company Animal Health GmbH</name>
+										<contactParty classCode="CON">
+											<telecom value="TEL:77777777777"/>
+											<telecom value="FAX:77777777777"/>
+											<telecom value="MAILTO:representedorganisation@gmail.com"/>
+											<contactPerson classCode="PSN" determinerCode="INSTANCE">
+												<name>
+													<prefix>MS.</prefix>
+													<given>Testgivenname</given>
+													<family>familyname</family>
+												</name>
+											</contactPerson>
+										</contactParty>
+									</representedOrganization>
+								</assignedEntity>
+							</author><!--**************************************************** 
+								A.1 Receiver = Regulatory Authority -->
+							<primaryInformationRecipient typeCode="PRCP">
+								<assignedEntity classCode="ASSIGNED">
+									<code code="T95009" codeSystem="2.16.840.1.113883.13.206" displayName="RA"/>
+									<addr use="WP">
+										<streetAddressLine>7 Westferry Circus Canary Wharf </streetAddressLine>
+										<city>London</city>
+										<state/>
+										<postalCode>E14 4HB</postalCode>
+										<country>GBR</country>
+									</addr>
+									<representedOrganization classCode="ORG" determinerCode="INSTANCE">
+										<name>European Medicines Agency</name>
+									</representedOrganization>
+								</assignedEntity>
+							</primaryInformationRecipient>
+						</controlActEvent>
+					</subjectOf1><!-- **************************************************** 
+						A.4.4.1 type of submission -->
+					<subjectOf2 typeCode="SUBJ">
+						<investigationCharacteristic classCode="CASE" moodCode="EVN">
+							<code code="T95003" codeSystem="2.16.840.1.113883.13.206" displayName="Type of Submission"/>
+							<value code="C68625" codeSystem="2.16.840.1.113883.13.195" displayName="NULLIFICATION" xsi:type="CE">
+								 <originalText>This is the text for the reason</originalText> 
+							</value>
+						</investigationCharacteristic>
+					</subjectOf2><!-- **************************************************** 
+						A.4.4.3 type of information in report -->
+					<subjectOf2 typeCode="SUBJ">
+						<investigationCharacteristic classCode="CASE" moodCode="EVN">
+							<code code="T95004" codeSystem="2.16.840.1.113883.13.206" displayName="Type of Information in Report"/>
+							<value code="C82452" codeSystem="2.16.840.1.113883.13.196" displayName="Both  Safety And Lack Of Expected Effectiveness" xsi:type="CE"/>
+						</investigationCharacteristic>
+					</subjectOf2><!--************************************************************************************** 
+						B.6 Linked report - type -->
+					<subjectOf2 typeCode="SUBJ">
+						<investigationCharacteristic classCode="CASE" moodCode="EVN">
+							<code code="T95037" codeSystem="2.16.840.1.113883.13.206" displayName="Report Number(s) of Linked Report(s)"/>
+							<value code="LTOT" codeSystem="2.16.840.1.113883.13.219" displayName="Parent – Offspring" xsi:type="CD">
+								<originalText>USA-FDASENDR-2009-US-01234</originalText>
+							</value>
+						</investigationCharacteristic>
+					</subjectOf2><!--************************************************************************************** 
+						B.3.6 seriousness -->
+					<subjectOf2 typeCode="SUBJ">
+						<investigationCharacteristic classCode="CASE" moodCode="EVN">
+							<code code="T95022" codeSystem="2.16.840.1.113883.13.206" displayName="Serious AE"/>
+							 <value value="true" xsi:type="BL"/>
+						</investigationCharacteristic>
+					</subjectOf2>
+				</investigationEvent>
+			</subject>
+		</controlActProcess>
+	</PORR_IN049006UV><!--****************** B.8.1.3.1 - B.8.1.3.2 Batch Receiver 
+		***************************** -->
+	<receiver typeCode="RCV">
+		<device classCode="DEV" determinerCode="INSTANCE">
+			<id/>
+			<asAgent classCode="AGNT">
+				<representedOrganization classCode="ORG" determinerCode="INSTANCE">
+					<id extension="EVHUMAN" root="USFDACVM"/>
+				</representedOrganization>
+			</asAgent>
+		</device>
+	</receiver><!--**************************************************** B.8.1.2.1 
+		- B.8.1.2.8 Administrative person responsible for the whole file (at a technical 
+		level) -->
+	<sender>
+		<device classCode="DEV" determinerCode="INSTANCE">
+			<id/>
+			<asAgent classCode="AGNT">
+				<representedOrganization classCode="ORG" determinerCode="INSTANCE">
+					 <id extension="EVHUMANWT" root="batch-sender-identifier-id"/> 
+					<notificationParty classCode="CON">
+						<id/>
+						<telecom value="TEL:7777777777"/>
+						<telecom value="FAX:7777777777"/>
+						<telecom value="MAILTO:test.vich@gmail.com"/>
+						<contactPerson>
+							<id/>
+							<name>
+								<prefix>Mr.</prefix>
+								<given>Ben</given>
+								<family>Strickland</family>
+							</name>
+						</contactPerson>
+					</notificationParty>
+				</representedOrganization>
+			</asAgent>
+		</device>
+	</sender><!--File created from transform file $Revision:1.24$ $RevDate:21/09/2016 
+		16:52:40$ -->
+</MCCI_IN200100UV01>
