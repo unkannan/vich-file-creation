@@ -3,6 +3,8 @@ package com.org.createfiles;
 import Lib.ExcelReader;
 import vich_file_creation.vich_file_creation.XpathSupport;
 import java.io.File;
+import java.io.IOException;
+
 import org.junit.*;
 
 public class VichFilesValidation {
@@ -14,7 +16,12 @@ public class VichFilesValidation {
 	String DirectoryToCreateFiles="Files/createvichtestfiles";
 	@Before
 	public void GetReadyBeforecreation()   {
-		createFile = new XpathSupport();
+		try {
+			createFile = new XpathSupport();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		//renamefileObj=new RenameFIle();
 		xlreader=new ExcelReader();
 		
@@ -22,51 +29,20 @@ public class VichFilesValidation {
 	@Test
 	public void CreateTestDataFilesFromExcel() {
 		File destDir = new File(DirectoryToCreateFiles);
-		int sheetnumber=0;
 		System.out.println("kannan");
 		
-			//createFile.CreatingXMLFilesFromGivenSheet(sheetnumber,ExcelFilePath,VICH_TestFile_AllFields,NullFlavorsTemplate);
-		for (int j = 1; j <= xlreader.getDataRowCount(ExcelFilePath); j++) {
-			if (xlreader.getcellvalue(ExcelFilePath,j,"flag").equalsIgnoreCase("Y")
-					|| xlreader.getcellvalue(ExcelFilePath,j,"flag") != null) {
-				String newfilename = xlreader.getcellvalue(ExcelFilePath,j,"FILENAME");
+		for (int row = 1; row <= xlreader.getDataRowCount(ExcelFilePath); row++) {
+			if (xlreader.getcellvalue(ExcelFilePath,row,"Flag").equalsIgnoreCase("Y")) {
+				String newfilename = xlreader.getcellvalue(ExcelFilePath,row,"FILENAME");
+				System.out.println(newfilename+": File creation process started ");
 				try {
-					createFile.FileContentModifyFromVICHTemplate(VICH_TestFile_AllFields, NullFlavorsTemplate, xlreader.getcellvalue(ExcelFilePath,j,"XPATH"),destDir+ "/" + newfilename+".xml");
+					createFile.CreateVICHFilesFromInputSheet(VICH_TestFile_AllFields, NullFlavorsTemplate, xlreader.getcellvalue(ExcelFilePath,row,"XPATH"),destDir+ "/" + newfilename+".xml");
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
+				System.out.println("File created " + newfilename);
+				System.out.println("********************************************************");
 			}
 		}
 	}
 }	
-
-
-/*	public static void main(String args[]) {
-
-final String NullFlavorsTemplate = "Files/Templates/NullFlavorsTemplate.xml";
-System.out.println(xlreader.getcolumnindex(ExcelFilePath,"FILENAME"));
-//XpathSupport createFile = new XpathSupport();
-
-
-
-
-System.out.println("datarowcount="+xlreader.getDataRowCount(ExcelFilePath));
- 
-	for (int j = 1; j <= xlreader.getDataRowCount(ExcelFilePath); j++) {
-		System.out.println("flag="+xlreader.getcellvalue(ExcelFilePath,j,"flag"));
-		if (xlreader.getcellvalue(ExcelFilePath,j,"flag").equalsIgnoreCase("Y")
-				|| xlreader.getcellvalue(ExcelFilePath,j,"flag") != null) {
-			System.out.println("jasonString="+xlreader.getcellvalue(ExcelFilePath,j,"XPATH"));
-			String jasonString = xlreader.getcellvalue(ExcelFilePath,j,"XPATH"); 
-			System.out.println("newfilename="+xlreader.getcellvalue(ExcelFilePath,j,"FILENAME").toString());
-			String newfilename = xlreader.getcellvalue(ExcelFilePath,j,"FILENAME");
-			try {
-				//createFile.createfilefromtemplate1(validtemplatefile, jasonString,
-					//	"Files/bizrulefilesfldr/" + newfilename + ".xml");
-			} catch (Exception e) {
-				System.out.println("Error in creating file");
-				e.printStackTrace();
-			}
-		}
-	}
-}*/

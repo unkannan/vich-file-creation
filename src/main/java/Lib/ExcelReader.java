@@ -66,7 +66,7 @@ public class ExcelReader {
 				return columnIndex;
 			}
 		}
-		System.out.println("Column does not exist in excel");
+		System.out.println(colname+": Column does not exist in excel");
 		throw new NullPointerException();
 	}
 
@@ -74,7 +74,7 @@ public class ExcelReader {
 		OpenExcelToAccess(xlFIle);
 		sheet = wb.getSheetAt(0);
 		
-		String cellValue=sheet.getRow(row).getCell(getcolumnindex(xlFIle, colname)).toString(); 
+		String cellValue=sheet.getRow(row).getCell(getcolumnindex(xlFIle, colname)).getStringCellValue(); 
 				closeExcel();
 		return cellValue;		 
 	}
