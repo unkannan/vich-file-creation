@@ -91,14 +91,14 @@ public class XpathSupport {
 			JSONObject finalObject = (JSONObject) parentArray.get(XpathElement++);
 			String xmlxpathstr = finalObject.get("field").toString();
 			setBatchCaseidentifiers(newfilename);
-			updatingXpathValueinXML(finalObject.get("value").toString(), xmlxpathstr, NullFlavorsTemplate);
+			updatingXpathValueIndoc(finalObject.get("value").toString(), xmlxpathstr, NullFlavorsTemplate);
 		}
-		newfilename = writingfinalFileFromdoc(newfilename);
+			newfilename = writingfinaltestxmlFileFromdoc(newfilename);
 		// File dirVetFunctionaltestdataDir=new File(dirVetFunctionaltestdataDirPath);
 		// CopyFilesToVetFoldertoRun(destDir,dirVetFunctionaltestdataDir);
 	}
 
-	void updatingXpathValueinXML(String value, String xmlxpathstr, String NullFlavorsTemplate) {
+	void updatingXpathValueIndoc(String value, String xmlxpathstr, String NullFlavorsTemplate) {
 		Node startDateNode = null;
 		try {
 			startDateNode = (Node) xPath.compile(xmlxpathstr).evaluate(doc, XPathConstants.NODE);
@@ -173,7 +173,7 @@ public class XpathSupport {
 		MainNode.replaceChild(NullNode, startDateNode);
 	}
 
-	private String writingfinalFileFromdoc(String newfilename) {
+	private String writingfinaltestxmlFileFromdoc(String newfilename) {
 		TransformerFactory transformerFactory = TransformerFactory.newInstance();
 		Transformer transformer = null;
 		try {
@@ -217,4 +217,15 @@ public class XpathSupport {
 			}
 		}
 	}
+	public boolean settingBatchCaseidentifiers(File file) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, TransformerException {
+		xPath = XPathFactory.newInstance().newXPath();
+		f = DocumentBuilderFactory.newInstance();
+		b = f.newDocumentBuilder();
+		doc = b.parse(file.getAbsoluteFile());
+		//Batch identifier
+		setBatchCaseidentifiers(file.getName());
+		return true;
+		
+	}
+	
 }

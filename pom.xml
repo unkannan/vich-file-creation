@@ -3,12 +3,30 @@
   <groupId>vich-file-creation</groupId>
   <artifactId>vich-file-creation</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
   
+   <build>
+    <plugins>
+        <plugin>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.22.1</version>
+             <configuration>
+          <includes>
+            <include>VichFilesValidation.java</include>
+          </includes>
+        </configuration>
+            <dependencies>
+              
+            </dependencies>
+        </plugin>
+    </plugins>
+</build>
   <dependencies>
+     
   <dependency>
       <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+     <artifactId>junit-dep</artifactId>
+      <version>4.8.2</version>
       <scope>test</scope>
     </dependency>
     <dependency>

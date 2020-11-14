@@ -435,7 +435,8 @@
 														</observation>
 													</outboundRelationship2>
 												</observation>
-											</outboundRelationship2><!--**************************************************** 
+											</outboundRelationship2>
+											<!--**************************************************** 
 												B.3.9 Previous Exposure to the VMP -->
 											<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
 												<observation classCode="OBS" moodCode="EVN">
