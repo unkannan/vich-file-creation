@@ -104,9 +104,9 @@
 								B.7.1.1 Attached document type -->
 							<code nullFlavor="NI"/><!--**************************************************** 
 								B.7.1 Attached document filename -->
-							<title nullFlavor="NI"><!--**************************************************** 
+							<title nullFlavor="NI"/><!--**************************************************** 
 								B.7 Attached document as a text file -->
-							<text nullFlavor="NI">
+							<text nullFlavor="NI"/>
 						</document>
 					</reference>
 					<component typeCode="COMP">
@@ -803,7 +803,7 @@
 							classCode="CASE" moodCode="EVN">
 							<code codeSystem="2.16.840.1.113883.13.206" code="T95037"
 								displayName="Report Number(s) of Linked Report(s)" />
-							<value xsi:type="CD" nullFlavor="NI"/>
+							<value xsi:type="CD" nullFlavor="NI">
 								<originalText nullFlavor="NI"/>
 							</value>
 						</investigationCharacteristic>
