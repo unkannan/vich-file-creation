@@ -119,7 +119,7 @@
 									<subjectOf2 typeCode="SBJ">
 										<observation classCode="OBS" moodCode="EVN">
 											<code code="T95005" codeSystem="2.16.840.1.113883.13.206" displayName="Number of Animals Affected"/>
-											<value nullFlavor="NI" xsi:type="INT"/>
+											<value xsi:type="INT" value="1"/>
 										</observation>
 									</subjectOf2><!--**************************************************** 
 										B.3.8.1 Ongoing -->

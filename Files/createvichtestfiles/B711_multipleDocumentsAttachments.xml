@@ -103,13 +103,8 @@
 					 <id extension="2"/>
 					 <code codeSystem="2.16.840.1.113883.13.211" code="C68623"
 					 displayName="Necropsy (Autopsy)"/>
-					 <title>necpicture.jpg</title>
-					 <text mediaType="text/plain" representation="B64">
-					R0lGODlhZABqALMAAFrMYr/BvlKOVJKOg2xZUKmenMfDw8tgWJpVUbaxsPb19v///+bm5tfX1wAAAAAAAC
-					wAAAAAZABqAAAE/3DJSau9mCrGWhkFIopF2TSMkq1s674rk4x0TRB1ETQq7P/AS6gmOhiPRxuu0Ag6nyzGC
-					EmtVmkFqHa7MByK1rCV8OWagwUjTsw2FhG9s5ylQCRxtIF+gNjTvmtfDHOEGQ12
-					…… more Base-64 data …...
-					 </text>
+					 <title>necpicturedoc.doc</title>
+					 <text mediaType="text/plain" representation="B64">UGF0aWVudCBicmVlZDogQXNzZXNzbWVudCByZWFzb246Cgo=</text>
 					 </document>
 					 </reference>
 					 <reference typeCode="REFR">
@@ -118,12 +113,7 @@
 					 <code codeSystem="2.16.840.1.113883.13.211" code="C36292"
 					 displayName="Laboratory Report"/>
 					 <title>labreport.pdf</title>
-					 <text mediaType="text/plain" representation="B64">
-					JVBERi0xLjQNJeLjz9MNCjYgMCBvYmo8PC9IWzQ3NiAxMzNdL0xpbmVhcml6ZWQgMS9FIDE3OTAvTCA1N
-					jg5L04gMS9PIDkvVCA1NTIzPj4NZW5kb2JqDSAgICAgICAgICAgICAgICAgICAgICAgICAgDQp4cmVmDQo2I
-					DkNCjAwMDAwMDAwMTYgMDAwMDAgbg0KMDAwMDAwMDYwOSAwMDA
-					...... more Base-64 data ......
-					 </text>
+					 <text mediaType="text/plain" representation="B64">UGF0aWVudCBicmVlZDogQXNzZXNzbWVudCByZWFzb246Cgo=</text>
 					 </document>
 					 </reference> 
 					<component typeCode="COMP">

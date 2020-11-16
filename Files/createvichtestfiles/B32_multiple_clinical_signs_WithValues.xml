@@ -510,11 +510,7 @@
 										<subjectOf2 typeCode="SBJ">
 										<observation classCode="OBS" moodCode="EVN">
 											<code code="T95020" codeSystem="2.16.840.1.113883.13.206" displayName="Reaction"/>
-											<effectiveTime xsi:type="IVL_TS">
-												<low value="20060608"/> <!--**************************************************** B.3.5.1 Duration 
-													(AE Duration) and AE Duration Time Units -->
-												<width unit="d" value="5"/>
-											</effectiveTime><!--**************************************************** 
+											 <!--**************************************************** 
 												B.3.2 Adverse Clinical Manifestations (VedDRA LLT Term Name) -->
 											<value code="334" codeSystem="2.16.840.1.113883.4.358" codeSystemVersion="8" displayName="Vomiting" xsi:type="CE"/><!--**************************************************** 
 												B.3.2.1.1 Number of patients affected - accuracy -->
