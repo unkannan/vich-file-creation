@@ -216,7 +216,7 @@
 												<observation classCode="OBS" moodCode="EVN">
 													<code code="T95008" codeSystem="2.16.840.1.113883.13.206" displayName="Breed Components"/><!--**************************************************** 
 														B.1.4 Breed - crossbred -->
-													<value nullFlavor="NI" xsi:type="BL"/>
+													<value nullFlavor="NI" xsi:type="CE"/>
 												</observation>
 											</inboundRelationship>
 										</observation>
