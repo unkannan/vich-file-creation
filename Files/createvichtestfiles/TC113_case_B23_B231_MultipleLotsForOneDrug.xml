@@ -273,6 +273,16 @@
 														<lotNumberText mediaType="text/plain">D024734</lotNumberText>   <!--**************************************************** B.2.3.1 Lot Expiry 
 															date -->
 														<expirationTime value="2006"/>
+														<member classCode="MBR">
+ <memberProductInstance classCode="MMAT" determinerCode="INSTANCE">
+ <id extension="2"/>
+ <existenceTime xsi:type="IVL_TS">
+ <low value="20051218"/>
+ </existenceTime>
+ <lotNumberText mediaType="text/plain">GAP3489 FOR USA-123479</lotNumberText>
+ <expirationTime value="20060415"/>
+ </memberProductInstance>
+ </member>
 													</productInstanceInstance>
 													<kindOfProduct classCode="MMAT" determinerCode="KIND"><!--**************************************************** 
 															B.2.1.1 VMP Product code (as NDC code) -->

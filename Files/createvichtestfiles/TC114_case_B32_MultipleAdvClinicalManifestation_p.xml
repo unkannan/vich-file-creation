@@ -478,7 +478,9 @@
 												<low value="20060608"/> <!--**************************************************** B.3.5.1 Duration 
 													(AE Duration) and AE Duration Time Units -->
 												<width unit="d" value="5"/>
-											</effectiveTime><!--**************************************************** 
+											</effectiveTime>
+											
+											<!--**************************************************** 
 												B.3.2 Adverse Clinical Manifestations (VedDRA LLT Term Name) -->
 											<value xsi:type="CE" codeSystem="2.16.840.1.113883.4.358"
 																codeSystemVersion="7" code="984" displayName="Death"/><!--**************************************************** 
