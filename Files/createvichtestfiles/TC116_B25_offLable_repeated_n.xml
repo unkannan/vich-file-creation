@@ -374,7 +374,7 @@
 											<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
 												<observation classCode="OBS" moodCode="EVN">
 													<code code="T95015" codeSystem="2.16.840.1.113883.13.206" displayName="Use According to Label"/>
-													<value value="false" xsi:type="BL"/>
+													<value value="True" xsi:type="BL"/>
 												</observation>
 											</outboundRelationship2><!--**************************************************** 
 												B.2.5.1- B.2.5.9 Explanation for Off-Label Use -->
@@ -385,7 +385,7 @@
 													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
 														<observation classCode="OBS" moodCode="EVN">
 															<code code="T95028" codeSystem="2.16.840.1.113883.13.206" displayName="Species Off-Label "/>
-															<value value="true" xsi:type="BL"/>
+															<value nullFlavor="NI" xsi:type="BL"/>
 														</observation>
 													</outboundRelationship2><!-- 2) Misuse - Route -->
 													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
@@ -397,7 +397,7 @@
 													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
 														<observation classCode="OBS" moodCode="EVN">
 															<code code="T95030" codeSystem="2.16.840.1.113883.13.206" displayName="Overdosed"/>
-															<value value="true" xsi:type="BL"/>
+															<value nullFlavor="NI" xsi:type="BL"/>
 														</observation>
 													</outboundRelationship2><!-- 4) Misuse - Underdose -->
 													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
@@ -409,7 +409,7 @@
 													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
 														<observation classCode="OBS" moodCode="EVN">
 															<code code="T95032" codeSystem="2.16.840.1.113883.13.206" displayName="Treatment regimen Off-Label"/>
-															<value value="true" xsi:type="BL"/>
+															<value nullFlavor="NI" xsi:type="BL"/>
 														</observation>
 													</outboundRelationship2><!-- 6) Misuse - Indication -->
 													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
@@ -444,7 +444,7 @@
 											<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
 												<observation classCode="OBS" moodCode="EVN">
 													<code code="T95015" codeSystem="2.16.840.1.113883.13.206" displayName="Use According to Label"/>
-													<value value="false" xsi:type="BL"/>
+													<value value="true" xsi:type="BL"/>
 												</observation>
 											</outboundRelationship2><!--**************************************************** 
 												B.2.5.1- B.2.5.9 Explanation for Off-Label Use -->
@@ -455,7 +455,7 @@
 													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
 														<observation classCode="OBS" moodCode="EVN">
 															<code code="T95028" codeSystem="2.16.840.1.113883.13.206" displayName="Species Off-Label "/>
-															<value value="true" xsi:type="BL"/>
+															<value nullFlavor="NI" xsi:type="BL"/>
 														</observation>
 													</outboundRelationship2><!-- 2) Misuse - Route -->
 													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
@@ -467,7 +467,7 @@
 													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
 														<observation classCode="OBS" moodCode="EVN">
 															<code code="T95030" codeSystem="2.16.840.1.113883.13.206" displayName="Overdosed"/>
-															<value value="true" xsi:type="BL"/>
+															<value nullFlavor="NI" xsi:type="BL"/>
 														</observation>
 													</outboundRelationship2><!-- 4) Misuse - Underdose -->
 													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
@@ -479,7 +479,7 @@
 													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
 														<observation classCode="OBS" moodCode="EVN">
 															<code code="T95032" codeSystem="2.16.840.1.113883.13.206" displayName="Treatment regimen Off-Label"/>
-															<value value="true" xsi:type="BL"/>
+															<value nullFlavor="NI" xsi:type="BL"/>
 														</observation>
 													</outboundRelationship2><!-- 6) Misuse - Indication -->
 													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">

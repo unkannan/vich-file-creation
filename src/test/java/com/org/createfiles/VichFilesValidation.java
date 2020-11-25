@@ -16,9 +16,10 @@ public class VichFilesValidation {
 	String DirectoryToCreateFiles = "Files/createvichtestfiles";
 	// RenameFile file;
 	File destDir = null;
+	final int dataSheet=0;
 
 	@Before
-	public void GetReadyBeforecreation() {
+	public void PrerequisitesBeforecreation() {
 		try {
 			createFile = new XpathSupport();
 		} catch (IOException e) {
@@ -30,17 +31,17 @@ public class VichFilesValidation {
 		destDir = new File(DirectoryToCreateFiles);
 	}
 
-	// @Test
+	 //@Test
 	public void CreateTestDataFilesFromExcel() {
 		// File destDir = new File(DirectoryToCreateFiles);
 
-		for (int row = 1; row <= xlreader.getDataRowCount(ExcelFilePath); row++) {
-			if (xlreader.getcellvalue(ExcelFilePath, row, "Flag").equalsIgnoreCase("Y")) {
-				String newfilename = xlreader.getcellvalue(ExcelFilePath, row, "FILENAME");
+		for (int row = 1; row <= xlreader.getDataRowCount(ExcelFilePath,dataSheet); row++) {
+			if (xlreader.getcellvalue(ExcelFilePath,dataSheet, row, "Flag").equalsIgnoreCase("Y")) {
+				String newfilename = xlreader.getcellvalue(ExcelFilePath,dataSheet, row, "FILENAME");
 				System.out.println(newfilename + ": File creation process started ");
 				try {
 					createFile.CreateVICHFilesFromInputSheet(VICH_TestFile_AllFields, NullFlavorsTemplate,
-							xlreader.getcellvalue(ExcelFilePath, row, "XPATH"), destDir + "/" + newfilename + ".xml");
+							xlreader.getcellvalue(ExcelFilePath,dataSheet, row, "XPATH"), destDir + "/" + newfilename + ".xml");
 				} catch (Exception e) {
 					e.printStackTrace();
 					System.out.println("File cannot be created " + newfilename);
@@ -51,12 +52,12 @@ public class VichFilesValidation {
 		}
 	}
 
-	@Test
+	//@Test
 	public void renameFile() {
-		for (int row = 1; row <= xlreader.getDataRowCount(ExcelFilePath); row++) {
-			if (xlreader.getcellvalue(ExcelFilePath, row, "Flag").equalsIgnoreCase("Y")) {
-				String filename = xlreader.getcellvalue(ExcelFilePath, row, "FILENAME");
-				String newfilename = xlreader.getcellvalue(ExcelFilePath, row, "NewFileName");
+		for (int row = 1; row <= xlreader.getDataRowCount(ExcelFilePath,dataSheet); row++) {
+			if (xlreader.getcellvalue(ExcelFilePath,dataSheet, row, "Flag").equalsIgnoreCase("Y")) {
+				String filename = xlreader.getcellvalue(ExcelFilePath,dataSheet, row, "FILENAME");
+				String newfilename = xlreader.getcellvalue(ExcelFilePath,dataSheet,row, "NewFileName");
 				File file = new File(destDir + "//" + filename + ".xml");
 				File newfile = new File(destDir + "//" + newfilename + ".xml");
 				System.out.println("Checking for file exists: " + file.getName());

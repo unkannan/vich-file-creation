@@ -178,12 +178,14 @@ public class SafetyReportCheckInCosmosDB {
 	}
 
 	public String SearchForFile(String dir,String file) {
+		System.out.println("file searching="+file);
 		File[] files = new File(dir).listFiles();
 		for(File f:files) {
 			String localfile=(f.getName()).substring(0,(f.getName()).length()-11);
-			System.out.println(localfile);
-			System.out.println(file);
-			if(("ack_"+file).equalsIgnoreCase(localfile))
+			System.out.println("ack file = "+f.getName());
+			System.out.println("substring= "+f.getName().substring(4,file.length()+4));
+			
+			if((file).equalsIgnoreCase(f.getName().substring(4,file.length()+4)))
 	            return f.getName();
 		}
 		return null;

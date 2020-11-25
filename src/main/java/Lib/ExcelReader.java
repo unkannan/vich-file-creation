@@ -20,7 +20,7 @@ public class ExcelReader {
 	static InputStream inp = null;
 	static Sheet sheet = null;
 	static Workbook wb = null;
-	 
+
 	private void OpenExcelToAccess(String xlFIle) {
 		try {
 			inp = new FileInputStream(xlFIle);
@@ -39,7 +39,7 @@ public class ExcelReader {
 
 	}
 
-	public int getDataRowCount(String xlFIle) {
+	public int getDataRowCount(String xlFIle, int dataSheet) {
 		OpenExcelToAccess(xlFIle);
 		sheet = wb.getSheetAt(0);
 		int totalrowstoread = sheet.getLastRowNum();
@@ -60,55 +60,53 @@ public class ExcelReader {
 		}
 	}
 
-	public int getcolumnindex(String xlFIle,String colname) {
+	public int getcolumnindex(String xlFIle, int dataSheet, String colname) {
 		OpenExcelToAccess(xlFIle);
 		sheet = wb.getSheetAt(0);
-		int firstRow=0;
-		
-		for(int columnIndex=0;columnIndex<sheet.getRow(0).getLastCellNum();columnIndex++) {
-			if(sheet.getRow(firstRow).getCell(columnIndex).toString().equalsIgnoreCase(colname)) {
+		int firstRow = 0;
+
+		for (int columnIndex = 0; columnIndex < sheet.getRow(0).getLastCellNum(); columnIndex++) {
+			if (sheet.getRow(firstRow).getCell(columnIndex).toString().equalsIgnoreCase(colname)) {
 				closeExcel();
 				return columnIndex;
 			}
 		}
-		System.out.println(colname+": Column does not exist in excel");
+		System.out.println(colname + ": Column does not exist in excel");
 		throw new NullPointerException();
 	}
 
-	public String getcellvalue(String xlFIle,int row,String colname) {
+	public String getcellvalue(String xlFIle, int dataSheet, int row, String colname) {
 		OpenExcelToAccess(xlFIle);
-		sheet = wb.getSheetAt(0);
-		String cellValue=null;
+		sheet = wb.getSheetAt(dataSheet);
+		String cellValue = null;
 		try {
-		 cellValue=sheet.getRow(row).getCell(getcolumnindex(xlFIle, colname)).getStringCellValue(); 
-				closeExcel();
-		}catch(Exception e) {}
-		return cellValue;		 
+			cellValue = sheet.getRow(row).getCell(getcolumnindex(xlFIle, dataSheet, colname)).getStringCellValue();
+			closeExcel();
+		} catch (Exception e) {
+		}
+		return cellValue;
 	}
-	public void setcellvalue(String xlFIle,int row,String colname,String results) throws IOException {
-		try{
-			File excel = new File("D:\\vich-file-creation\\Files\\Templates\\createfilesfromxpath_A.xlsx");
+
+	public void setcellvalue(String xlFIle, int dataSheet, int row, String colname, String results) throws IOException {
+		try {
+			File excel = new File(xlFIle);
 			FileInputStream inp1 = new FileInputStream(excel);
-		
-			XSSFWorkbook wb1 = new XSSFWorkbook(inp1);
-			XSSFSheet  sheet1 = wb1.getSheetAt(0);
-		Cell newpath = sheet1.getRow(row).createCell(2);
-		newpath.setCellValue("kkkkkk");
-		System.out.println(newpath.getStringCellValue());
-		FileOutputStream fileOut = new FileOutputStream(excel);
-        wb1.write(fileOut);
-        
-     
-        fileOut.close();
-        wb1.close();
-        inp1.close();
-		}catch (Exception e1) {
-			FileOutputStream fileOut = new FileOutputStream(xlFIle);
-	        wb.write(fileOut);
-	        fileOut.close();
-	        e1.printStackTrace();
+
+			XSSFWorkbook wb = new XSSFWorkbook(inp1);
+			XSSFSheet sheet = wb.getSheetAt(dataSheet);
+
+			sheet.getRow(row).getCell(getcolumnindex(xlFIle, dataSheet, colname)).setCellValue(results);
+			inp1.close();
+
+			FileOutputStream fileOut = new FileOutputStream(excel);
+
+			wb.write(fileOut);
+			wb.close();
+
+			fileOut.close();
+
+		} catch (Exception e1) {
+			e1.printStackTrace();
 		}
 	}
 }
-
-
