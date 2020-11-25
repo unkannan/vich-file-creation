@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><MCCI_IN200100UV01 xmlns="urn:hl7-org:v3" xmlns:date="http://exslt.org/dates-and-times" xmlns:mif="urn:hl7-org:v3/mif" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ITSVersion="XML_1.0" xsi:schemaLocation="urn:hl7-org:v3   http://eudravigilance.ema.europa.eu/XSD/vich/multicacheschemas/MCCI_IN200100UV01.xsd"><!--*************************** B.8.1.1.1 - B.8.1.1.2 
 		Batch Number/Identifier -->
-	<id extension="Batch_TC74_B25_offLabel_197_bizrul_Null251NULL_err" root="ZZELANCO"/><!--**************************** B.8.1.4 
+	<id extension="Batch_B814_dtofBatchCreation_266_invalidformat_DtFormat_4" root="ZZELANCO"/><!--**************************** B.8.1.4 
 		Date of Batch Creation -->
-	<creationTime value="20200228064439-0500"/><!--********************************* 
+	<creationTime value="20071016102030"/><!--********************************* 
 		B.8.1.5 Message Version Number + Release Number -->
 	<responseModeCode/>
 	<versionCode code="VICHAER1.0.0"/>
 	<interactionId/>
 	<PORR_IN049006UV xsi:type="PORR_IN049006UV.MCCI_MT000100UV01.Message"><!--**************************************************** B.8.2.1.1 
 			- B.8.2.1.2 Message Number -->
-		<id extension="Message_TC74_B25_offLabel_197_bizrul_Null251NULL_err" root="ZZELANCO"/><!--**************************************************** 
+		<id extension="Message_B814_dtofBatchCreation_266_invalidformat_DtFormat_4" root="ZZELANCO"/><!--**************************************************** 
 			B.8.2.4 Date of Message Creation -->
 		<creationTime value="20200228064439-0500"/>
 		<interactionId/><!--**************************************************** 
@@ -71,7 +71,7 @@
 			<subject typeCode="SUBJ">
 				<investigationEvent classCode="INVSTG" moodCode="EVN"><!--**************************************************** A.4.1 
 						Unique AER Identification Number -->
-					<id extension="USA-USFDACVM-NULL_err" root="1.2.3.4"/>
+					<id extension="Case_B814_dtofBatchCreation_266_invalidformat_DtFormat_4" root="1.2.3.4"/>
 					<code code="ICSR"/><!-- **************************************************** 
 						B.3.1 Narrative of AE -->
 					<text mediaType="text/plain">The sows and gilts were given the two
@@ -268,20 +268,10 @@
 															<low value="20051208"/>
 														</existenceTime><!--**************************************************** 
 															B.2.3 Lot Number (Product Lot Number) -->
-														<lotNumberText mediaType="text/plain">GAP3487 FOR</lotNumberText>   <!--**************************************************** B.2.3.1 Lot Expiry 
+														<lotNumberText mediaType="text/plain">GAP3487 FOR
+															USA-123479</lotNumberText>   <!--**************************************************** B.2.3.1 Lot Expiry 
 															date -->
 														<expirationTime value="20060405"/>
-														<member classCode="MBR">
- <memberProductInstance classCode="MMAT" determinerCode="INSTANCE">
- <id extension="2"/>
- <existenceTime xsi:type="IVL_TS">
- <low value="20051218"/>
- </existenceTime>
- <lotNumberText mediaType="text/plain">GAP3489 FOR USA-123479</lotNumberText>
- <expirationTime value="20060415"/>
- </memberProductInstance>
- </member>
-
 													</productInstanceInstance>
 													<kindOfProduct classCode="MMAT" determinerCode="KIND"><!--**************************************************** 
 															B.2.1.1 VMP Product code (as NDC code) -->
@@ -383,7 +373,7 @@
 											<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
 												<observation classCode="OBS" moodCode="EVN">
 													<code code="T95015" codeSystem="2.16.840.1.113883.13.206" displayName="Use According to Label"/>
-													<value nullFlavor="NI" xsi:type="BL"/>
+													<value value="false" xsi:type="BL"/>
 												</observation>
 											</outboundRelationship2><!--**************************************************** 
 												B.2.5.1- B.2.5.9 Explanation for Off-Label Use -->
@@ -406,43 +396,43 @@
 													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
 														<observation classCode="OBS" moodCode="EVN">
 															<code code="T95030" codeSystem="2.16.840.1.113883.13.206" displayName="Overdosed"/>
-															<value nullFlavor="NI" xsi:type="BL"/>
+															<value value="true" xsi:type="BL"/>
 														</observation>
 													</outboundRelationship2><!-- 4) Misuse - Underdose -->
 													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
 														<observation classCode="OBS" moodCode="EVN">
 															<code code="T95031" codeSystem="2.16.840.1.113883.13.206" displayName="Underdosed"/>
-															<value nullFlavor="NI" xsi:type="BL"/>
+															<value value="true" xsi:type="BL"/>
 														</observation>
 													</outboundRelationship2><!-- 5) Misuse - Treatment regimen -->
 													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
 														<observation classCode="OBS" moodCode="EVN">
 															<code code="T95032" codeSystem="2.16.840.1.113883.13.206" displayName="Treatment regimen Off-Label"/>
-															<value nullFlavor="NI" xsi:type="BL"/>
+															<value value="true" xsi:type="BL"/>
 														</observation>
 													</outboundRelationship2><!-- 6) Misuse - Indication -->
 													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
 														<observation classCode="OBS" moodCode="EVN">
 															<code code="T95033" codeSystem="2.16.840.1.113883.13.206" displayName="Indication Off-Label"/>
-															<value nullFlavor="NI" xsi:type="BL"/>
+															<value value="true" xsi:type="BL"/>
 														</observation>
 													</outboundRelationship2><!-- 7) Misuse - Storage condition -->
 													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
 														<observation classCode="OBS" moodCode="EVN">
 															<code code="T95034" codeSystem="2.16.840.1.113883.13.206" displayName="Storage condition Off-Label"/>
-															<value nullFlavor="NI" xsi:type="BL"/>
+															<value value="true" xsi:type="BL"/>
 														</observation>
 													</outboundRelationship2><!-- 8) Misuse - Expired product -->
 													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
 														<observation classCode="OBS" moodCode="EVN">
 															<code code="T95035" codeSystem="2.16.840.1.113883.13.206" displayName="Product expired"/>
-															<value nullFlavor="NI" xsi:type="BL"/>
+															<value value="true" xsi:type="BL"/>
 														</observation>
 													</outboundRelationship2><!-- 9) Misuse - other -->
 													<outboundRelationship2 contextConductionInd="true" typeCode="PERT">
 														<observation classCode="OBS" moodCode="EVN">
 															<code code="T95036" codeSystem="2.16.840.1.113883.13.206" displayName="Other off label issue"/>
-															<value nullFlavor="NI" xsi:type="BL"/>
+															<value value="true" xsi:type="BL"/>
 														</observation>
 													</outboundRelationship2>
 												</observation>
@@ -579,8 +569,8 @@
 										<postalCode>28467</postalCode>
 										<country>USA</country>
 									</addr>
-									<telecom value="TEL:1234567"/>
-									<telecom value="FAX:1234789"/>
+									<telecom value="TEL:+1-888-1234567"/>
+									<telecom value="FAX:+1-888-1234789"/>
 									<telecom value="MAILTO:vet1@example.com"/>
 									<assignedPerson classCode="PSN" determinerCode="INSTANCE">
 										<name>
@@ -612,8 +602,8 @@
 										<postalCode>12345</postalCode>
 										<country>USA</country>
 									</addr>
-									<telecom value="TEL:1234567"/>
-									<telecom value="FAX:1234789"/>
+									<telecom value="TEL:+1-888-1234567"/>
+									<telecom value="FAX:+1-888-1234789"/>
 									<telecom value="MAILTO:vet1@example.com"/>
 									<assignedPerson classCode="PSN" determinerCode="INSTANCE">
 										<name>
