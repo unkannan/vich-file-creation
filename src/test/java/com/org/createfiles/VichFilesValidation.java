@@ -13,7 +13,8 @@ public class VichFilesValidation {
 	ExcelReader xlreader = null;
 	XpathSupport createFile = null;
 	final String NullFlavorsTemplate = "Files/Templates/NullFlavorsTemplate.xml";
-	String DirectoryToCreateFiles = "Files/createvichtestfiles";
+	//String DirectoryToCreateFiles = "Files/createvichtestfiles";
+	String DirectoryToCreateFiles = "Files/mandatory";
 	// RenameFile file;
 	File destDir = null;
 	final int dataSheet=0;
@@ -31,7 +32,7 @@ public class VichFilesValidation {
 		destDir = new File(DirectoryToCreateFiles);
 	}
 
-	 //@Test
+	 @Test
 	public void CreateTestDataFilesFromExcel() {
 		// File destDir = new File(DirectoryToCreateFiles);
 
