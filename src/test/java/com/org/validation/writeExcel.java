@@ -18,12 +18,12 @@ public class writeExcel {
 			File excel = new File(ExcelFilePath);
 			FileInputStream inp1 = new FileInputStream(excel);
 			XSSFWorkbook wb1 = new XSSFWorkbook(inp1);
-			XSSFSheet  sheet1 = wb1.getSheetAt(1);
+			XSSFSheet  sheet1 = wb1.getSheetAt(0);
 			
-		Cell newpath = sheet1.getRow(2).createCell(5);
+	//	Cell newpath = sheet1.getRow(2).createCell(11);
 		System.out.println(sheet1.getRow(1).getCell(2).getStringCellValue());
 		System.out.println(sheet1.getSheetName());
-		sheet1.getRow(1).getCell(2).setCellValue("kalifa");
+		sheet1.getRow(1).getCell(11).setCellValue("kalifa");
 				//newpath.getStringCellValue());
 		//newpath.setCellValue("kkkkkk");
 		//System.out.println(newpath.getStringCellValue());

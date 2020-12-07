@@ -71,7 +71,7 @@
 			<subject typeCode="SUBJ">
 				<investigationEvent classCode="INVSTG" moodCode="EVN"><!--**************************************************** A.4.1 
 						Unique AER Identification Number -->
-					<id extension="USA-GAPINDSY-58683" root="1.2.3.4"/>
+					<id extension="USA-GAPINDSY-82875" root="1.2.3.4"/>
 					<code code="ICSR"/><!-- **************************************************** 
 						B.3.1 Narrative of AE -->
 					<text mediaType="text/plain">The sows and gilts were given the two
@@ -637,7 +637,7 @@
 										<name>Company Animal Health GmbH</name>
 										<contactParty classCode="CON">
 											<telecom value="TEL:77777777777"/>
-											<telecom value="FAX:77777777777"/>
+											<telecom nullFlavor="NI"/>
 											<telecom value="MAILTO:representedorganisation@gmail.com"/>
 											<contactPerson classCode="PSN" determinerCode="INSTANCE">
 												<name>

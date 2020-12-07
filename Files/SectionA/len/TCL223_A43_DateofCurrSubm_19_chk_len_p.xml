@@ -71,7 +71,7 @@
 			<subject typeCode="SUBJ">
 				<investigationEvent classCode="INVSTG" moodCode="EVN"><!--**************************************************** A.4.1 
 						Unique AER Identification Number -->
-					<id extension="USA-GAPINDSY-13426" root="1.2.3.4"/>
+					<id extension="USA-GAPINDSY-77600" root="1.2.3.4"/>
 					<code code="ICSR"/><!-- **************************************************** 
 						B.3.1 Narrative of AE -->
 					<text mediaType="text/plain">The sows and gilts were given the two

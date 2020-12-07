@@ -1,6 +1,7 @@
 package com.org.createfiles;
 
 import Lib.ExcelReader;
+import vich_file_creation.vich_file_creation.BatchIDUpdates;
 import vich_file_creation.vich_file_creation.XpathSupport;
 import java.io.File;
 import java.io.IOException;
@@ -14,6 +15,7 @@ public class VichFilesValidation {
 	XpathSupport createFile = null;
 	final String NullFlavorsTemplate = "Files/Templates/NullFlavorsTemplate.xml";
 	//String DirectoryToCreateFiles = "Files/createvichtestfiles";
+	//String DirectoryToCreateFiles = "Files/SectionA/Mand";
 	String DirectoryToCreateFiles = "Files/SectionA/Mand";
 	// RenameFile file;
 	File destDir = null;
@@ -27,12 +29,11 @@ public class VichFilesValidation {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		// renamefileObj=new RenameFIle();
 		xlreader = new ExcelReader();
 		destDir = new File(DirectoryToCreateFiles);
 	}
 
-	// @Test
+	 @Test
 	public void CreateTestDataFilesFromExcel() {
 		// File destDir = new File(DirectoryToCreateFiles);
 
@@ -53,7 +54,7 @@ public class VichFilesValidation {
 		}
 	}
 
-	@Test
+	//@Test
 	public void renameFile() {
 		for (int row = 1; row <= xlreader.getDataRowCount(ExcelFilePath,dataSheet); row++) {
 			if (xlreader.getcellvalue(ExcelFilePath,dataSheet, row, "Flag").equalsIgnoreCase("Y")) {
@@ -68,9 +69,14 @@ public class VichFilesValidation {
 						System.out.println(filename);
 						file.renameTo(newfile);
 						System.out.println("file rename process completed is file: " + newfile.getName());
-					} else
+						xlreader.setcellvalue(ExcelFilePath, dataSheet, row, "fileexists", "File Exists And renamed");
+						BatchIDUpdates.setBatchCaseidentifiersforRenamedFiles(destDir + "/" + newfilename + ".xml");
+					} else {
 						System.out.println("file Does not Exists : " + file.getName());
+						xlreader.setcellvalue(ExcelFilePath, dataSheet, row, "fileexists", "File does not exists");
+					}
 				} catch (Exception e) {
+					xlreader.setcellvalue(ExcelFilePath, dataSheet, row, "fileexists", "exception in file rename");
 					e.printStackTrace();
 				}
 			}

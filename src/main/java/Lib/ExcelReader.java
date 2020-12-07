@@ -9,7 +9,6 @@ import java.io.InputStream;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -87,14 +86,13 @@ public class ExcelReader {
 		return cellValue;
 	}
 
-	public void setcellvalue(String xlFIle, int dataSheet, int row, String colname, String results) throws IOException {
+	public void setcellvalue(String xlFIle, int dataSheet, int row, String colname, String results)  {
 		try {
 			File excel = new File(xlFIle);
 			FileInputStream inp1 = new FileInputStream(excel);
 
 			XSSFWorkbook wb = new XSSFWorkbook(inp1);
 			XSSFSheet sheet = wb.getSheetAt(dataSheet);
-
 			sheet.getRow(row).getCell(getcolumnindex(xlFIle, dataSheet, colname)).setCellValue(results);
 			inp1.close();
 
