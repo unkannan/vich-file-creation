@@ -41,7 +41,7 @@ public class UpdateExcelwithCosmosResults {
 				String newfilename = xlreader.getcellvalue(ExcelFilePath, dataSheet, row, "FILENAME");
 
 				if (newfilename.contains(".xml")) {
-					newfilename = newfilename.substring(0, newfilename.length() - 4);
+					newfilename = newfilename.replace(".xml", "");
 				}
 				System.out.println(newfilename);
 				results=updateTestResults.SafetyReportValidationCheckInDB(newfilename);
