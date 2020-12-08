@@ -1,10 +1,14 @@
 package com.org.validation;
 
+import java.io.File;
 import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
 import org.junit.Before;
 import org.junit.Test;
 
 import com.azure.cosmos.vich.dbresults.validation.SafetyReportCheckInCosmosDB;
+import com.google.common.io.Files;
 
 import Lib.ExcelReader;
 
@@ -51,22 +55,32 @@ public class UpdateExcelwithCosmosResults {
 		String results = null;
 
 		for (int row = 1; row <= xlreader.getDataRowCount(ExcelFilePath, dataSheet); row++) {
-			if (xlreader.getcellvalue(ExcelFilePath, dataSheet, row, "Flag").equalsIgnoreCase("Y")) {
-				String newfilename = xlreader.getcellvalue(ExcelFilePath, dataSheet, row, "FILENAME");
+			System.out.println("************************************************************");
+			System.out.println("************************************************************");
+			try{
+				if (xlreader.getcellvalue(ExcelFilePath, dataSheet, row, "Flag").equalsIgnoreCase("Y")) {
+					String newfilename = xlreader.getcellvalue(ExcelFilePath, dataSheet, row, "FILENAME");
+						System.out.println("validtion started for File:"+newfilename);
 
 				if (newfilename.contains(".xml")) {
-					newfilename = newfilename.substring(0, newfilename.length() - 4);
+					newfilename = newfilename.replace(".xml", "");
 				}
 
 				String ActualFileName = updateTestResults.SearchForFile(ackFilePath, newfilename);
-
+				System.out.println("Acks for validtion:"+ActualFileName);
 				ActualFileName = ackFilePath + ActualFileName;
 				if (ActualFileName != null)
+					System.out.println("Found ack in folder:"+ActualFileName);
 					results = updateTestResults.ackValidation(ActualFileName);
-
+					System.out.println("Validation completed:"+ActualFileName);
 				xlreader.setcellvalue(ExcelFilePath, dataSheet, row, "ackresults", results);
-
+				System.out.println("updated the excel");
+				File srcFile=new File(ActualFileName);
+				File destFile=new File("Files/acks/archive");
+				FileUtils.moveFileToDirectory(srcFile, destFile,true);
+				System.out.println("ack archived"+destFile.getName());
 			}
+			}catch(Exception e) {}
 		}
 	}
 }

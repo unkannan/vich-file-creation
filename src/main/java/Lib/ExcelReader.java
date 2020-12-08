@@ -105,6 +105,7 @@ public class ExcelReader {
 
 		} catch (Exception e1) {
 			e1.printStackTrace();
+			//sheet.getRow(row).getCell(getcolumnindex(xlFIle, dataSheet, colname)).setCellValue(results);
 		}
 	}
 }

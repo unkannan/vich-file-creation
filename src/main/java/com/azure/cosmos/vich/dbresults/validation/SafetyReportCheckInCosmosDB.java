@@ -131,8 +131,6 @@ public class SafetyReportCheckInCosmosDB {
 	}
 
 	public String ackValidation(String newfilename) throws FileNotFoundException {
-	//	String text = extractElement("/MCCI_IN200101UV01/MCCI_IN000002UV01/id/@extension", newfilename);
-		//String text = extractElement("/MCCI_IN200101UV01/MCCI_IN000002UV01//text", newfilename);
 		 String xmlStr = new Scanner( new File(newfilename) ).useDelimiter("\\Z").next();
 		 return extractElement1("text",xmlStr);
 		}
