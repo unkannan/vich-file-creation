@@ -604,7 +604,7 @@
 									</addr>
 									<telecom value="TEL:+18881234567"/>
 									<telecom value="FAX:+18881234789"/>
-									<telecom value="MAILTO:vet1@example.com">T6tUlJxhiSMaTrVxcIEIZKzehonuZtzKMPtuiSojWWmoRGibtdtaDTXAVaPKCxsuhGVBKJgyerxqQiGaRhVcNXLipJFlQgeEdIqb</telecom>
+									<telecom value="MAILTO:T6tUlJxhiSMaTrVxcIEIZKzehonuZtzKMPtuiSojWWmoRGibtdtaDTXAVaPKCxsuhGVBKJgyerxqQiGaRhVcNXLipJFlQgeEdIqb"/>
 									<assignedPerson classCode="PSN" determinerCode="INSTANCE">
 										<name>
 											<family>Peterson</family>

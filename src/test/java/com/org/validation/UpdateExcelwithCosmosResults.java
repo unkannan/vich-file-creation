@@ -33,11 +33,13 @@ public class UpdateExcelwithCosmosResults {
 		xlreader = new ExcelReader();
 	}
 
-	//@Test
+	@Test
 	public void vich_dbdatavalidation() throws IOException {
 		String results = null;
-		for (int row = 1; row <= xlreader.getDataRowCount(ExcelFilePath, dataSheet); row++) {
+		for (int row = 1; row <= xlreader.getDataRowCount(ExcelFilePath, dataSheet); row++) { 
 			if (xlreader.getcellvalue(ExcelFilePath, dataSheet, row, "Flag").equalsIgnoreCase("Y")) {
+				System.out.println("***************************************************");
+				System.out.println("***************************************************");
 				String newfilename = xlreader.getcellvalue(ExcelFilePath, dataSheet, row, "FILENAME");
 
 				if (newfilename.contains(".xml")) {
@@ -45,12 +47,17 @@ public class UpdateExcelwithCosmosResults {
 				}
 				System.out.println(newfilename);
 				results=updateTestResults.SafetyReportValidationCheckInDB(newfilename);
+				if (results!=null) {
+				System.out.println("results:"+results);
 				xlreader.setcellvalue(ExcelFilePath, dataSheet, row, "dbresults", results);
+				}
+				else
+					xlreader.setcellvalue(ExcelFilePath, dataSheet, row, "dbresults", "results is null");
 			}
 		}
 	}
 
-	@Test
+	//@Test
 	public void vich_ackValidation() throws IOException {
 		String results = null;
 

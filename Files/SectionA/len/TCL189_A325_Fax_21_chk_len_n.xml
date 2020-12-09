@@ -603,7 +603,7 @@
 										<country>USA</country>
 									</addr>
 									<telecom value="TEL:+18881234567"/>
-									<telecom value="FAX:+18881234789">Y5dhErWpvXBRfSmgFXABO</telecom>
+									<telecom value="FAX:+Y5dhErWpvXBRfSmgFXABO"/> 
 									<telecom value="MAILTO:vet1@example.com"/>
 									<assignedPerson classCode="PSN" determinerCode="INSTANCE">
 										<name>

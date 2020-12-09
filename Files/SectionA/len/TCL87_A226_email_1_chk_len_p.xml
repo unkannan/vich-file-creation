@@ -638,7 +638,7 @@
 										<contactParty classCode="CON">
 											<telecom value="TEL:77777777777"/>
 											<telecom value="FAX:77777777777"/>
-											<telecom value="MAILTO:representedorganisation@gmail.com">K</telecom>
+											<telecom value="MAILTO:k@gmail.com"/>
 											<contactPerson classCode="PSN" determinerCode="INSTANCE">
 												<name>
 													<prefix>MS.</prefix>

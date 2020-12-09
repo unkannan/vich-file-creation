@@ -636,7 +636,7 @@
 									<representedOrganization classCode="ORG" determinerCode="INSTANCE">
 										<name>Company Animal Health GmbH</name>
 										<contactParty classCode="CON">
-											<telecom value="TEL:77777777777"/>
+											<telecom value="TEL:"/>
 											<telecom value="FAX:77777777777"/>
 											<telecom value="MAILTO:representedorganisation@gmail.com"/>
 											<contactPerson classCode="PSN" determinerCode="INSTANCE">

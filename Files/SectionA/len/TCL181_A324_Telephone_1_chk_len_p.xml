@@ -602,7 +602,7 @@
 										<postalCode>12345</postalCode>
 										<country>USA</country>
 									</addr>
-									<telecom value="TEL:+18881234567">B</telecom>
+									<telecom value="TEL:+B"/>
 									<telecom value="FAX:+18881234789"/>
 									<telecom value="MAILTO:vet1@example.com"/>
 									<assignedPerson classCode="PSN" determinerCode="INSTANCE">

@@ -87,16 +87,19 @@ public class ExcelReader {
 	}
 
 	public void setcellvalue(String xlFIle, int dataSheet, int row, String colname, String results)  {
+		FileInputStream inp1=null;
+		File excel =null;
+		FileOutputStream fileOut =null;
 		try {
-			File excel = new File(xlFIle);
-			FileInputStream inp1 = new FileInputStream(excel);
+			  excel = new File(xlFIle);
+			  inp1 = new FileInputStream(excel);
 
 			XSSFWorkbook wb = new XSSFWorkbook(inp1);
 			XSSFSheet sheet = wb.getSheetAt(dataSheet);
 			sheet.getRow(row).getCell(getcolumnindex(xlFIle, dataSheet, colname)).setCellValue(results);
 			inp1.close();
 
-			FileOutputStream fileOut = new FileOutputStream(excel);
+			 fileOut = new FileOutputStream(excel);
 
 			wb.write(fileOut);
 			wb.close();
@@ -105,6 +108,39 @@ public class ExcelReader {
 
 		} catch (Exception e1) {
 			e1.printStackTrace();
+			try {
+				inp1.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+			 try {
+				fileOut = new FileOutputStream(excel);
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+			try {
+				wb.write(fileOut);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			try {
+				wb.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+			try {
+				fileOut.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			//sheet.getRow(row).getCell(getcolumnindex(xlFIle, dataSheet, colname)).setCellValue(results);
 		}
 	}

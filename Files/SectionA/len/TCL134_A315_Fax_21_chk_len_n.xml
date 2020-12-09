@@ -570,7 +570,7 @@
 										<country>USA</country>
 									</addr>
 									<telecom value="TEL:+18881234567"/>
-									<telecom value="FAX:+18881234789">V6jocHOnLffniyIAKTelx</telecom>
+									<telecom value="FAX:V6jocHOnLffniyIAKTelx"/> 
 									<telecom value="MAILTO:vet1@example.com"/>
 									<assignedPerson classCode="PSN" determinerCode="INSTANCE">
 										<name>

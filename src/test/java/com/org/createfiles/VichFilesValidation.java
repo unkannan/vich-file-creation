@@ -14,9 +14,9 @@ public class VichFilesValidation {
 	ExcelReader xlreader = null;
 	XpathSupport createFile = null;
 	final String NullFlavorsTemplate = "Files/Templates/NullFlavorsTemplate.xml";
-	//String DirectoryToCreateFiles = "Files/createvichtestfiles";
+	String DirectoryToCreateFiles = "Files/createvichtestfiles";
 	//String DirectoryToCreateFiles = "Files/SectionA/Mand";
-	String DirectoryToCreateFiles = "Files/SectionA/Mand";
+	//String DirectoryToCreateFiles = "Files/SectionA/Mand";
 	// RenameFile file;
 	File destDir = null;
 	final int dataSheet=0;
@@ -33,7 +33,7 @@ public class VichFilesValidation {
 		destDir = new File(DirectoryToCreateFiles);
 	}
 
-	// @Test
+	 @Test
 	public void CreateTestDataFilesFromExcel() {
 		// File destDir = new File(DirectoryToCreateFiles);
 
@@ -54,7 +54,7 @@ public class VichFilesValidation {
 		}
 	}
 
-	@Test
+	//@Test
 	public void renameFile() {
 		for (int row = 1; row <= xlreader.getDataRowCount(ExcelFilePath,dataSheet); row++) {
 			if (xlreader.getcellvalue(ExcelFilePath,dataSheet, row, "Flag").equalsIgnoreCase("Y")) {
