@@ -77,7 +77,7 @@ public class ExcelReader {
 	public String getcellvalue(String xlFIle, int dataSheet, int row, String colname) {
 		OpenExcelToAccess(xlFIle);
 		sheet = wb.getSheetAt(dataSheet);
-		String cellValue = null;
+		String cellValue = "N";
 		try {
 			cellValue = sheet.getRow(row).getCell(getcolumnindex(xlFIle, dataSheet, colname)).getStringCellValue();
 			closeExcel();

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><MCCI_IN200100UV01 xmlns="urn:hl7-org:v3" xmlns:date="http://exslt.org/dates-and-times" xmlns:mif="urn:hl7-org:v3/mif" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ITSVersion="XML_1.0" xsi:schemaLocation="urn:hl7-org:v3   http://eudravigilance.ema.europa.eu/XSD/vich/multicacheschemas/MCCI_IN200100UV01.xsd"><!--*************************** B.8.1.1.1 - B.8.1.1.2 
 		Batch Number/Identifier -->
-	<id extension="Batch_TSpl26_A314_Telephone_splchar_biz_p" root="ZZELANCO"/><!--**************************** B.8.1.4 
+	<id extension="Batch_TCB85_A41_78_caseid_countrycode13thchar_diffSymb_n" root="ZZELANCO"/><!--**************************** B.8.1.4 
 		Date of Batch Creation -->
 	<creationTime value="20200228064439-0500"/><!--********************************* 
 		B.8.1.5 Message Version Number + Release Number -->
@@ -9,7 +9,7 @@
 	<interactionId/>
 	<PORR_IN049006UV xsi:type="PORR_IN049006UV.MCCI_MT000100UV01.Message"><!--**************************************************** B.8.2.1.1 
 			- B.8.2.1.2 Message Number -->
-		<id extension="Message_TSpl26_A314_Telephone_splchar_biz_p" root="ZZELANCO"/><!--**************************************************** 
+		<id extension="Message_TCB85_A41_78_caseid_countrycode13thchar_diffSymb_n" root="ZZELANCO"/><!--**************************************************** 
 			B.8.2.4 Date of Message Creation -->
 		<creationTime value="20200228064439-0500"/>
 		<interactionId/><!--**************************************************** 
@@ -71,7 +71,7 @@
 			<subject typeCode="SUBJ">
 				<investigationEvent classCode="INVSTG" moodCode="EVN"><!--**************************************************** A.4.1 
 						Unique AER Identification Number -->
-					<id extension="USA-GAPINDSY-68919" root="1.2.3.4"/>
+					<id extension="USA-GAPINDSY=2012-US-14973" root="1.2.3.4"/>
 					<code code="ICSR"/><!-- **************************************************** 
 						B.3.1 Narrative of AE -->
 					<text mediaType="text/plain">The sows and gilts were given the two
@@ -274,7 +274,7 @@
 													</productInstanceInstance>
 													<kindOfProduct classCode="MMAT" determinerCode="KIND"><!--**************************************************** 
 															B.2.1.1 VMP Product code (as NDC code) -->
-														<code code="01234-*444" codeSystem="2.16.840.1.113883.3.6905.1.2"/> <!--**************************************************** B.2.1 Registered 
+														<code nullFlavor="NI"/> <!--**************************************************** B.2.1 Registered 
 															or brand name - mandatory -->
 														<name xsi:type="TN">Activyl</name><!-- **************************************************** 
 															B.2.2.2 Dosage Form -->
@@ -328,8 +328,8 @@
 														<asSpecializedKind classCode="GEN ">
 															<generalizedMaterialKind classCode="MAT" determinerCode="KIND"><!--**************************************************** 
 																	B.2.1.3 ATC vet code -->
-																<code code="T95013" codeSystem="2.16.840.1.113883.13.206" displayName="ATCvet Code"/>
-																<name xsi:type="TN">QM01AH91</name>
+																<code nullFlavor="NI"/>
+																<name xsi:type="TN">QA06AD01</name>
 															</generalizedMaterialKind>
 														</asSpecializedKind>
 														<ingredient classCode="INGR">
@@ -569,7 +569,7 @@
 										<postalCode>28467</postalCode>
 										<country>USA</country>
 									</addr>
-									<telecom value="!@#$%^&amp;*()"/>
+									<telecom value="TEL:+18881234567"/>
 									<telecom value="FAX:+18881234789"/>
 									<telecom value="MAILTO:vet1@example.com"/>
 									<assignedPerson classCode="PSN" determinerCode="INSTANCE">

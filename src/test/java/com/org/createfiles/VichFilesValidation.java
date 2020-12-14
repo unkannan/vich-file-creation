@@ -36,8 +36,10 @@ public class VichFilesValidation {
 	 @Test
 	public void CreateTestDataFilesFromExcel() {
 		// File destDir = new File(DirectoryToCreateFiles);
-System.out.println("Creating file Process Started");
+		 	System.out.println("Creating file Process Started");
 		for (int row = 1; row <= xlreader.getDataRowCount(ExcelFilePath,dataSheet); row++) {
+			System.out.println(row);
+			System.out.println(xlreader.getcellvalue(ExcelFilePath,dataSheet, row, "FILENAME"));
 			if (xlreader.getcellvalue(ExcelFilePath,dataSheet, row, "Flag").equalsIgnoreCase("Y")) {
 				String newfilename = xlreader.getcellvalue(ExcelFilePath,dataSheet, row, "FILENAME");
 				System.out.println(newfilename + ": File creation process started ");
