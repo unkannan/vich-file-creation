@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><MCCI_IN200100UV01 xmlns="urn:hl7-org:v3" xmlns:date="http://exslt.org/dates-and-times" xmlns:mif="urn:hl7-org:v3/mif" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ITSVersion="XML_1.0" xsi:schemaLocation="urn:hl7-org:v3   http://eudravigilance.ema.europa.eu/XSD/vich/multicacheschemas/MCCI_IN200100UV01.xsd"><!--*************************** B.8.1.1.1 - B.8.1.1.2 
 		Batch Number/Identifier -->
-	<id extension="NL-54321" root="ZZELANCO"/><!--**************************** B.8.1.4 
+	<id extension="Batch_TCM463_A442_sendExpedited_forNonExistCase_bizRul_p" root="ZZELANCO"/><!--**************************** B.8.1.4 
 		Date of Batch Creation -->
 	<creationTime value="20200228064439-0500"/><!--********************************* 
 		B.8.1.5 Message Version Number + Release Number -->
@@ -9,7 +9,7 @@
 	<interactionId/>
 	<PORR_IN049006UV xsi:type="PORR_IN049006UV.MCCI_MT000100UV01.Message"><!--**************************************************** B.8.2.1.1 
 			- B.8.2.1.2 Message Number -->
-		<id extension="NL-23456" root="ZZELANCO"/><!--**************************************************** 
+		<id extension="Message_TCM463_A442_sendExpedited_forNonExistCase_bizRul_p" root="ZZELANCO"/><!--**************************************************** 
 			B.8.2.4 Date of Message Creation -->
 		<creationTime value="20200228064439-0500"/>
 		<interactionId/><!--**************************************************** 
@@ -71,7 +71,7 @@
 			<subject typeCode="SUBJ">
 				<investigationEvent classCode="INVSTG" moodCode="EVN"><!--**************************************************** A.4.1 
 						Unique AER Identification Number -->
-					<id extension="USA-GAPINDSY" root="1.2.3.4"/>
+					<id extension="USA-GAPINDSY-73805" root="1.2.3.4"/>
 					<code code="ICSR"/><!-- **************************************************** 
 						B.3.1 Narrative of AE -->
 					<text mediaType="text/plain">The sows and gilts were given the two
@@ -672,7 +672,7 @@
 					<subjectOf2 typeCode="SUBJ">
 						<investigationCharacteristic classCode="CASE" moodCode="EVN">
 							<code code="T95003" codeSystem="2.16.840.1.113883.13.206" displayName="Type of Submission"/>
-							<value code="C53578" codeSystem="2.16.840.1.113883.13.195" displayName="Periodic" xsi:type="CE">
+							<value code="C68624" codeSystem="2.16.840.1.113883.13.195" displayName="EXPEDITED" xsi:type="CE">
 								<originalText nullFlavor="NI"/>
 							</value>
 						</investigationCharacteristic>

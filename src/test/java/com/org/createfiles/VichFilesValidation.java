@@ -33,7 +33,7 @@ public class VichFilesValidation {
 		destDir = new File(DirectoryToCreateFiles);
 	}
 
-	 @Test
+	@Test
 	public void CreateTestDataFilesFromExcel() {
 		// File destDir = new File(DirectoryToCreateFiles);
 		 	System.out.println("Creating file Process Started");
@@ -75,10 +75,10 @@ public class VichFilesValidation {
 						BatchIDUpdates.setBatchCaseidentifiersforRenamedFiles(destDir + "/" + newfilename + ".xml");
 					} else {
 						System.out.println("file Does not Exists : " + file.getName());
-						xlreader.setcellvalue(ExcelFilePath, dataSheet, row, "fileexists", "File does not exists");
+					//	xlreader.setcellvalue(ExcelFilePath, dataSheet, row, "fileexists", "File does not exists");
 					}
 				} catch (Exception e) {
-					xlreader.setcellvalue(ExcelFilePath, dataSheet, row, "fileexists", "exception in file rename");
+				//	xlreader.setcellvalue(ExcelFilePath, dataSheet, row, "fileexists", "exception in file rename");
 					e.printStackTrace();
 				}
 			}
